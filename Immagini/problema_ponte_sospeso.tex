@@ -1,0 +1,51 @@
+\begin{figure}
+
+  \centering
+  
+  \begin{tikzpicture}[spy using outlines={circle,red,dashed, magnification=4,size=9cm, connect spies}]
+   
+     \draw [-latex] (0,0) -- (9.5,0) node [below] {$x$};
+     \draw [-latex] (0,0) -- (0,4) node [left] {$y$};
+     \node at (0,0) [below left] {$O$};
+ 
+     \draw [thick] (1,2) parabola  bend (4.5,1) (8,2);
+     \node at (1,2) [above left] {$A$};
+     \node at (8,2) [above right] {$B$};
+ 
+     \draw [very thick, red] (1,0) -- (8,0);
+     \node [color = red] at (4.5,0) [below] {$\lambda>0$};
+ 
+     \foreach \x in {1,1.2,...,8} 
+     \draw (\x,0) -- (\x, 4/49*\x*\x - 36/49*\x + 130/49);
+   
+   \point {a}{1}{2.5};
+   \point {b}{8}{2.5};
+   \lineload {1}{a}{b}[.5][.5][.09];
+   \dimensioning {1}{a}{b}{-1}[$L$];
+ 
+   \node at (4.5, 3.6) {$\overline{f}(s)$};
+   \draw [-latex, thick] (9,3)--(9,2) node [right] {$\overline{g}$};
+
+
+   \begin{scope}[shift={(-0.2,-5.8)}]
+    \node at (.4,2.5) {$P(s)$};
+    \node at (6.5,1.2) {$P(s+ds)$};
+    \draw [-latex, very thick, red] (3.2,-3.4) --+(0,-1) node [above right] {$-\lambda\,g\,dx\,\hat{e}_2$};
+    \draw [very thick, -latex] (3.2, 3.3) node [below right] {$\overline{f}\,ds$}--+ (0,-1.8);
+
+    \end{scope}
+
+   
+   \spy on (3, .8) in node  at (3,-6);
+
+   
+
+
+  \end{tikzpicture}
+  
+  \caption{Problema del ponte sospeso}
+  \label{fig:problema_ponte_sospeso}
+  
+  
+  
+ \end{figure}

@@ -1,0 +1,91 @@
+\begin{figure}
+	\centering
+	
+	\begin{tikzpicture}
+	\scaling{.58};
+	
+	\point {a}{-5}{4};
+	\point {b}{5}{4};
+	\point {c}{-9}{0};
+	\point {d}{9}{0};
+	\point {e}{-9}{-2};
+	\point {f}{9}{-2};
+	
+	
+	\point {g2}{-8}{0};
+	\point {g3}{-7}{0};
+	\point {g4}{-6}{0};
+	\point {g5}{-5}{-2};
+	\point {g6}{-4}{0};
+	\point {g7}{-3}{0};
+	\point {g8}{-2}{0};
+	\point {g9}{-1}{0};
+	
+	\point {h1}{1}{0};
+	\point {h2}{2}{0};
+	\point {h3}{3}{0};
+	\point {h4}{4}{0};
+	\point {h5}{5}{-2};
+	\point {h6}{6}{0};
+	\point {h7}{7}{0};
+	\point {h8}{8}{0};
+	
+	
+	\beam {2}{c}{d};
+	
+	\beam {2}{a}{c};
+	\beam {2}{c}{e};
+	\beam {2}{b}{d};
+	\beam {2}{d}{f};
+	\beam {2}{a}{g9};
+	\beam {2}{b}{h1};
+	\beam {2}{a}{g2};
+	\beam {2}{a}{g3};
+	\beam {2}{a}{g4};
+	\beam {2}{a}{g5};
+	\beam {2}{a}{g6};
+	\beam {2}{a}{g7};
+	\beam {2}{a}{g8};
+	\beam {2}{b}{h1};
+	\beam {2}{b}{h2};
+	\beam {2}{b}{h3};
+	\beam {2}{b}{h4};
+	\beam {2}{b}{h5};
+	\beam {2}{b}{h6};
+	\beam {2}{b}{h7};
+	\beam {2}{b}{h8};
+	
+	\support {1}{e};
+	\support {1}{f};
+	\support {3}{g5};
+	\support {3}{h5};
+	
+	\hinge {1}{a};
+	\hinge {1}{b};
+	\hinge {1}{c};
+	\hinge {1}{d};
+	\hinge {1}{e};
+	\hinge {1}{f};
+	\hinge {1}{g2};
+	\hinge {1}{g3};
+	\hinge {1}{g4};
+	%\hinge {1}{g5};
+	\hinge {1}{g6};
+	\hinge {1}{g7};
+	\hinge {1}{g8};
+	\hinge {1}{g9};
+	
+	\hinge {1}{h1};
+	\hinge {1}{h2};
+	\hinge {1}{h3};
+	\hinge {1}{h4};
+	%\hinge {1}{h5};
+	\hinge {1}{h6};
+	\hinge {1}{h7};
+	\hinge {1}{h8};
+	\end{tikzpicture}
+		
+	
+	\caption{Schema statico di un ponte strallato a ventaglio}
+	\label{fig:schema_statico_ventaglio}
+\end{figure}

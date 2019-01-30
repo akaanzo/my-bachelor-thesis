@@ -1,0 +1,43 @@
+\begin{figure}
+	\centering
+	
+	\begin{tikzpicture}
+	
+	%\draw[help lines] (0,0) grid (10,5);
+	\point {a}{0}{2};
+	\point {b}{1}{2};
+	\point {c}{2}{0};
+	\point {d}{8}{0};
+	\point {e}{9}{2};
+	\point {f}{10}{2};
+	\point {g}{8}{5};
+	\point {h}{2}{5};
+	
+	\beam {2}{a}{h};
+	\beam {2}{b}{e};
+	\beam {2}{c}{h};
+	\beam {2}{d}{g};
+	\beam {2}{f}{g};
+	
+	\support {1}{b};
+	\support {1}{e};
+	\support {3}{c};
+	\support {3}{d};
+	\support {3}{a}[-45];
+	\support {3}{f}[45];
+	
+	\internalforces{h}{g}{0}{0}[-2.5][black];
+
+	
+	
+	
+	
+	
+	
+	\end{tikzpicture}
+	
+	
+	\caption{Schema statico di un ponte sospeso}
+	\label{fig:schema_statico_sospeso}
+	
+\end{figure}

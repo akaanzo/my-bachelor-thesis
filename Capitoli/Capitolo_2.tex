@@ -1,0 +1,546 @@
+\cleardoublepage
+\chapter{Teoria dei fili ideali}\label{chapter:teoria_fili}
+Nella trattazione analitica (derivante da \cite{siboni:funi}), quando si parla di filo (o fune), si intende un solido la cui lunghezza longitudinale sia molto maggiore della lunghezza caratteristica della sezione (diametro o diagonale, in base alla forma), con scarsa resistenza a flessione e torsione e che sopporti solo sforzi di trazione.
+
+In questo modo è possibile descrivere il filo mediante una curva di parametrizzazione
+
+\begin{equation*}
+	P=P(\lambda) \quad \lambda\in[\lambda_1, \lambda_2]
+\end{equation*}
+La curva deve risultare sufficientemente regolare e di classe almeno $C^2$.
+Per definizione, i punti $P(\lambda_1)$ e $P(\lambda_2)$ vengono detti \emph{estremi del filo}.
+
+La teoria qui riportata fa riferimento ai cosiddetti \emph{fili ideali}, definiti da due caratteristiche principali:
+\begin{enumerate}
+	\item configurazioni ammissibili;
+	\item reazioni vincolari.
+\end{enumerate}
+
+\section*{Configurazioni ammissibili}
+Un filo ideale può assumere qualsiasi configurazione descritta da una curva $C^2$ regolare (o biregolare) di lunghezza $L$ assegnata. Questo significa:
+\begin{itemize}
+	\item la curvatura $1/\,\rho$ e la torsione $1/\,\sigma$ possono assumere valori arbitrari come si deduce dalle formule di Frenet -- Serret
+	\begin{equation*}
+		\dfrac{d\hat{\tau}}{ds} = \dfrac{1}{\rho}\,\hat{n} \hspace*{2cm} \dfrac{d\hat{b}}{ds} = - \dfrac{1}{\sigma}\,\hat{n}
+	\end{equation*}
+	ove $s$ è l'ascissa curvilinea e $\hat{\tau}$, $\hat{n}$, $\hat{b} = \hat{\tau} \wedge \hat{n}$ sono rispettivamente i versori tangente, normale e binormale alla curva nella posizione $P(s)$.
+
+	L'arbitrarietà di questi valori rende il filo ideale perfettamente deformabile sia a flessione che a torsione, cosa che non accade in una fune reale: infatti, curvature molto grandi, genererebbero un momento flettente elevato nelle fibre interne del materiale che causerebbe la rottura dell'elemento. In particolare, curvatura e momento flettente sono legati dalla seguente legge caratteristica
+	\[
+	M = E\,I\,\chi
+	\]
+	dove $E$ è il modulo elastico del materiale, $I$ è il momento di inerzia della sezione e $\chi$ è la curvatura.
+
+	Si assume, quindi, rigidezza flessionale nulla ($E\,I\simeq 0$).
+	\item la lunghezza $L$ del filo è costante; le configurazioni $P(\lambda)$ devono soddisfare la condizione di \emph{inestensibilità}
+	\[
+	\int_{\lambda_1}^{\lambda_2} \left| \dfrac{dP}{d\lambda}(\lambda) \right|\,d\lambda = \int_{\lambda_1}^{\lambda_2} [\dot{P}(\lambda)^2]^{1/2}\, d\lambda = L = cost
+	\]
+	la cui impone che il filo, anche se sottoposto a sollecitazioni, non subisce variazioni di lunghezza. Anche in questo caso si tratta di una approssimazione della realtà poiché una fune reale, soggetta a sollecitazioni più o meno grandi, si allunga secondo il legame costitutivo del materiale.
+
+	La condizione di inestensibilità postula una rigidezza assiale infinita ($E\,A \to \infty$).
+\end{itemize}
+
+\section*{Reazioni vincolari}
+Il filo ideale sottoposto alle sollecitazioni reagisce internamente con delle reazioni vincolari interne.
+
+Considerando un intervallo $\lambda\in[\lambda_1, \lambda_2]$ si postula che le reazioni vincolari interne ad un tratto di filo (ad esempio $P(\lambda) - P(\lambda_2)$) si riducano a una unica reazione vincolare applicata in $P(\lambda)$. Questa forza, indicata con $\overline{T}(\lambda)$, prende il nome di \emph{tensione del filo} e risulta essere tangente alla curva in $\lambda$ (vedi figura~\ref{fig:tensione_filo}).
+
+\input{Immagini/filo_2.1}
+
+Estendendo quanto appena visto a una fune ideale di sezione non puntuale e tagliando in corrispondenza di $P(\lambda)$, per il \emph{principio di azione e reazione}, il tratto residuo genera una tensione uguale ed opposta, come visibile in figura~\ref{fig:tensione_fune_ideale}.
+
+Poiché il filo ideale è un elemento puntuale, il momento delle reazioni vincolari interne agenti su ogni sezione -- rispetto al baricentro -- risulta nullo. Ne consegue la condizione di \emph{perfetta flessibilità}, descritta poc'anzi, che è rafforzata dalla richiesta di  resistenza nulla a sforzi di taglio da parte del filo dovuta al fatto che la tensione è tangente al supporto del filo.
+
+Nella realtà, avendo -- il filo -- un diametro non infinitesimo, il momento generato dalle reazioni vincolari interne è, generalmente, diverso da zero.
+
+Infine, l'arbitrarietà del valore della tensione (che si impone di sola trazione) comporterebbe un carico di rottura del filo infinito, condizione che non è assolutamente applicabile in caso di fune reale.
+
+\subsection*{Osservazione}
+Mentre la tensione $\overline{T}(\lambda)$ è definita come una reazione vincolare interna, agli estremi, i termini $\overline{T}(\lambda_1)$ e $\overline{T}(\lambda_2)$ sono descritte come forze attive che interagiscono con l'esterno come, per esempio, un vincolo; in questo caso le tensioni $\overline{T}(\lambda_1)$ e $\overline{T}(\lambda_2)$ si identificano con i \emph{cimenti dinamici}.
+
+Definito il triedro di Frenet in un punto $P(\lambda)$ della curva, si può riscrivere la tensione come
+\[
+	\overline{T}(\lambda) = T(\lambda)\,\hat{\tau}(\lambda)
+\]
+ove
+\[
+T(\lambda) = \left|\overline{T}(\lambda)\right|\geq 0 \quad \lambda\in[\lambda_1, \lambda_2]
+\]
+
+\section{Sollecitazioni esterne}
+Esistono due diverse tipologie di sollecitazioni che possono essere applicate al filo:
+\begin{itemize}
+	\item concentrate: sono applicate in un punto singolo del filo e sono descritte da un vettore;
+	\item distribuite: sono applicate lungo un tratto (oppure tutto) di filo e sono descritte da una densità di forza per unità di lunghezza $\overline{f}(s)$. Preso un tratto infinitesimo di filo di lunghezza $ds$, la forza che agisce sul tratto considerato vale
+	\[
+		d\overline{F}(s) = \overline{f}(s)\,ds \quad s\in[0,L]
+	\]
+	ove $s$ è la \emph{ascissa curvilinea} che descrive il filo di intervallo $[0,L]$.
+	In generale, le sollecitazioni sono funzione di posizione e velocità oltre che del tempo
+	\[
+	\overline{F} = \overline{F}(t, P, \dot{P})
+	\]
+\end{itemize}
+
+\section{Condizione di equilibrio}
+Per un sistema costituito da $N$ punti materiali ${P_1, \dots, P_N}$ soggetto a sollecitazioni $\overline{F}_i (t, P_i, \dot{P}_i),~ i=1,\dots,N$ la configurazione $P_0$ è di equilibrio \emph{se e solo se} la quiete in $P_0$, definita come
+\[
+P(t) = P_0\quad \forall t\in\mathbb{R}
+\]
+è un \emph{moto naturale} del sistema, cioè è soluzione delle equazioni del moto.
+
+Il postulato delle reazione vincolari in termini generali è descritto dalla seguente equazione
+\[
+m_i\,\ddot{P}_i = \overline{F}_i(t,P_i(t), \dot{P}_i(t)) + \overline{\Phi}_i\qquad i=1,\dots,N
+\]
+Applicandolo alla configurazione $P_0$, indicato precedentemente come in quiete, si ha
+\begin{equation}
+	\label{eq:equilibrio_p0}
+	0 = \overline{F}_i (t, P_0, 0) + \overline{\Phi}_i\qquad i = 1,\dots, N\quad\forall t\in\mathbb{R}
+\end{equation}
+dove le reazioni vincolari $\overline{\Phi}_i$ devono essere quelle effettivamente esplicabili dai vincoli.
+
+L'equazione \eqref{eq:equilibrio_p0} equivale alla \emph{prima equazione cardinale della statica}; definito un polo $O\in\mathbb{E}^3$, la \emph{seconda equazione cardinale della statica}, che deriva esplicitamente dalla prima, risulta
+\begin{equation*}
+	0 = (P_i - O)\wedge\overline{F}_i(t,P_0, 0) + (P_i - O)\wedge\overline{\Phi}_i\qquad i=1,\dots,N\quad\forall t\in\mathbb{R}
+\end{equation*}
+Allora si può dire che, \emph{condizione necessaria e sufficiente} perché $P_0$ sia un equilibrio del sistema è che siano valide le equazioni cardinali della statica, in conformità con le reazioni vincolari esplicate dai vincoli.
+
+Per quanto riguarda un corpo continuo come un filo, si dice che:
+\begin{quotation}
+	una configurazione del filo è in equilibrio se e solo se sono soddisfate, per mezzo di reazioni vincolari esplicabili dai vincoli, le equazioni cardinali della statica \textbf{per ogni tratto di fune}.\footnote{citato da \cite{siboni:funi}}
+\end{quotation}
+
+\section{Equazioni cardinali della statica per un elemento di filo}
+
+\input{Immagini/forze_filo_2.2}
+
+\subsection{Prima equazione cardinale della statica}
+
+Si consideri un tratto di filo compreso fra $P(s)$ e $P(s + \delta s)$ (figura~\ref{fig:forze_filo}); per l'equilibrio è necessario che il vettore risultante di tutte le sollecitazioni agenti sul tratto di filo sia nullo
+\[
+\overline{T}(s+\delta s) - \overline{T}(s) + \int_s^{s+\delta s} \overline{f}(\xi)\,d\xi = 0
+\]
+Proiettando la densità di forza lungo un generico versore $\hat{e}_i$ e applicando il teorema del valor medio, essendo $\overline{f}(\xi)$ una funzione continua nell'intervallo $\xi\in [s, s +\delta s]$, si può scrivere
+\[
+\hat{e}_i \cdot \int_s^{s+\delta s} \overline{f}(\xi)\,d\xi = \int_s^{s+\delta s} \hat{e}_i\cdot \overline{f}(\xi)\,d\xi = \delta s\,\hat{e}_i\cdot\overline{f}(s+ \theta_i\,\delta s)
+\]
+con $\theta_i\in (0,1)$ opportuno. Generalizzando per le tre direzioni $1, 2, 3$ e sostituendo nell'equazione si ottiene
+\begin{equation*}
+\overline{T}(s+\delta s) - \overline{T}(s) + \delta s\,\sum_{i=1}^3 \hat{e}_i\cdot \overline{f}(s+\theta_i\,\delta s)\,\hat{e}_i = 0
+\end{equation*}
+
+A questo punto, dividendo entrambi i membri per $\delta s$ e calcolando il seguente limite
+\[
+\lim_{\delta s\to 0} \left[ \dfrac{\overline{T}(s+\delta s)-\overline{T}(s)}{\delta s} + \sum_{i=1}^3 \hat{e}_i\cdot \overline{f}(s+\theta_i\,\delta s)\,\hat{e}_i \right] = 0
+\]
+Poiché $\overline{f}$ è una funzione continua, il limite esiste e vale
+\[
+\lim_{\delta s \to 0} \overline{f}(s+\theta_i\,\delta s) = \lim_{\delta s \to 0} \overline{f}(s+\delta s) = \overline{f}(s)
+\]
+da cui
+\[
+\lim_{\delta s \to 0} \sum_{i=1}^3 \hat{e}_i\cdot \overline{f}(s+\theta_i\,\delta s)\,\hat{e}_i = \sum_{i=1}^3 \hat{e}_i\cdot \overline{f}(s)\,\hat{e}_i = \overline{f}(s)
+\]
+La definizione di limite, inoltre, assicura che
+\[
+\lim_{\delta s \to 0} \dfrac{\overline{T}(s+\delta s)-\overline{T}(s)}{\delta s} = \dfrac{d\overline{T}}{ds}(s)
+\]
+In definitiva, la \textbf{prima equzione cardinale della statica} si riscrive nella seguente forma
+\begin{equation}
+\label{eq:prima_eq_cardinale_statica}
+\dfrac{d\overline{T}}{ds}(s) + \overline{f}(s) = 0\qquad \forall s \in (s_1, s_2)
+\end{equation}
+che risulta una equazione differenziale nella coordinata $s$.
+
+\subsection{Seconda equazione cardinale della statica}
+Scegliendo come polo per il calcolo del momento angolare il punto $P(s)$, la seconda equazione della statica si può scrivere come
+\[
+[P(s+\delta s) - P(s)] \wedge \overline{T}(s+\delta s) + \int_s^{s+\delta s} [P(\xi) - P(s)]\wedge \overline{f}(\xi)\,d\xi = 0
+\]
+Come fatto in precedenza, si proietta l'equazione lungo i versori degli assi coordinati e si applica il teorema del valor medio
+\begin{align*}
+&\hat{e}_i \cdot \int_s^{s+\delta s} [P(\xi) - P(s)]\wedge \overline{f}(\xi)\,d\xi =\\ =&\int_s^{s+\delta s} \hat{e}_i \cdot [P(\xi) - P(s)]\wedge \overline{f}(\xi)\,d\xi =\\=& \delta s\,\hat{e}_i \cdot [P(s+\zeta_i\,\delta s) - P(s)] \wedge \overline{f}(s+\zeta_i\,\delta s)
+\end{align*}
+ove $\zeta_i \in (0,1)$ è un opportuno scalare. Sostituendo e sommando vettorialmente lungo le tre direzioni si ottiene
+\begin{align*}
+&[P(s+\delta s) - P(s)] \wedge \overline{T}(s+\delta s) +\\+& \delta s\,\sum_{i=1}^3 \hat{e}_i \cdot [P(s + \zeta_i\,\delta s) - P(s)]\wedge \overline{f}(s + \zeta_i\,\delta s)\,\hat{e}_i = 0
+\end{align*}
+Si divide, quindi, per la lunghezza $\delta s$ e si calcola il limite per $\delta s$ tendente a zero
+\begin{align*}
+&\lim_{\delta s\to 0} \left[ \dfrac{P(s+\delta s) - P(s)}{\delta s} \wedge \overline{T}(s + \delta s)\right] +\\
++&\lim_{\delta s\to 0} \,\sum_{i=1}^3 \hat{e}_i \cdot [P(s+\zeta_i\,\delta s) - P(s)]\wedge \overline{f}(s+\zeta_i\,\delta s)\,\hat{e}_i = 0
+\end{align*}
+Il secondo termine si annulla, poiché
+\begin{align*}
+&\lim_{\delta s\to 0} \hat{e}_i \cdot [P(s + \zeta_i\,\delta s) - P(s)] \wedge \overline{f}(s+\zeta_i\,\delta s) =\\
+=& \lim_{\delta s \to 0} \hat{e}_i \cdot [P(s + \delta s) - P(s)] \wedge \overline{f}(s+\delta s) =\\
+=& \hat{e}_i \cdot [P(s) - P(s)]\wedge \overline{f}(s) = 0
+\end{align*}
+mentre il primo termine
+\begin{align*}
+&\lim_{\delta s \to 0} \dfrac{P(s+\delta s) - P(s)}{\delta s} = \dfrac{dP}{ds}(s)\\[1.5ex]
+&\lim_{\delta s \to 0} \overline{T}(s+\delta s) = \overline{T}(s)
+\end{align*}
+Allora, \textbf{seconda equazione cardinale della statica} riscritta in forma locale è
+\begin{equation}
+\label{eq:seconda_eq_cardinale_statica}
+\dfrac{dP}{ds}(s) \wedge \overline{T}(s) = 0\qquad \forall s\in (s_1, s_2)
+\end{equation}
+
+\subsubsection*{Osservazione}
+Ricordando la definizione del versore tangente
+\[
+\hat{\tau}(s) = \dfrac{dP}{ds}(s)
+\]
+la \eqref{eq:seconda_eq_cardinale_statica} assicura, grazie all'annullarsi del prodotto vettoriale, che la tensione $\overline{T}(s)$ sia tangente al filo
+\[
+\overline{T}(s) = T(s)\,\dfrac{dP}{ds}(s) = T(s)\,\hat{\tau}(s)
+\]
+
+Le sole equazioni cardinali della statica \eqref{eq:prima_eq_cardinale_statica} e \eqref{eq:seconda_eq_cardinale_statica} descrivono una \emph{condizione necessaria ma non sufficiente} per l'equilibrio del filo.
+
+La sufficienza della suddetta condizione viene garantita richiedendo che le tensioni si mantengano di segno non negativo; perciò
+\[
+T(s)\geq 0\qquad \forall s\in(s_1, s_2)
+\]
+dove le tensioni sono dirette in modo concorde all'ascissa curvilinea $s$.
+
+In definitiva, nel caso di filo soggetto a sollecitazioni distribuite di densità $\overline{f}(s)$ continua nell'intervallo $(s_1, s_2)$, \emph{condizione necessaria e sufficiente per l'equilibrio del filo} è che si soddisfino le seguenti relazioni
+\begin{equation}
+	\label{eq:cns_equilibrio}
+	\begin{cases}
+		\dfrac{d\overline{T}}{ds}(s) + \overline{f}(s) = 0\\
+		\overline{T}(s) = T(s)\,\dfrac{dP}{ds}(s)\\
+		T(s) \geq 0
+	\end{cases}
+	\quad \forall s \in(s_1, s_2)
+\end{equation}
+
+\section{Equazioni intrinseche dell'equilibrio}
+Nelle ipotesi di curva biregolare  e di modulo della tensione  $T(s)$ strettamente positivo,  si può ridurre il sistema \eqref{eq:cns_equilibrio} a una unica equazione
+\begin{equation}
+	\label{eq:equzione_indefinita_equilibrio}
+	\dfrac{d}{ds}(T\,\hat{\tau}) + \overline{f}(s) = 0
+\end{equation}
+detta \emph{equazione indefinita di equilibrio}. Sviluppando la derivata del prodotto presente nel primo termine si ottiene
+\[
+	\dfrac{dT}{ds}\,\hat{\tau} + T\,\dfrac{d\hat{\tau}}{ds} + \overline{f}(s) = 0
+\]
+e ricordando la definizione di curvatura che lega la derivata del versore tangente al versore normale
+\[
+	\dfrac{dT}{ds}\,\hat{\tau} + T\,\dfrac{1}{\rho}\,\hat{n} + \overline{f}(s) = 0
+\]
+Proiettando l'equazione appena ricavata lungo i versori che formano il triedro di Frenet si ottengono le \emph{equazioni intrinseche dell'equilibrio} per il tratto di filo considerato
+\begin{equation}
+	\begin{cases}
+		\dfrac{dT}{ds} + \hat{\tau}\cdot \overline{f}(s)=0\\[2ex]
+		\dfrac{T}{\rho} + \hat{n}\cdot \overline{f}(s)=0\\[2ex]
+		\hat{b}\cdot \overline{f}(s)=0
+	\end{cases}
+\end{equation}
+
+\subsection*{Osservazione}
+La densità di forza distribuita $\overline{f}(s)$, finora scritta come funzione della sola variabile s, è in realtà una funzione nota dipendente non solo dall'ascissa curvilinea $s$ ma anche dalla parametrizzazione $P(s)$ e del versore tangente $\hat{\tau}(s)$; Si considera quindi
+\[
+\overline{f} = \overline{f}	(s, P(s), \hat{\tau}(s))
+\]
+
+Nella trattazione seguente si considererà implicita la dipendenza da $s$ delle funzioni tensione, versore tangente e densità di sollecitazione.
+
+\section{Equazioni di equilibrio ridotte a forma normale}
+Sia $T(s)>0\quad\forall s \in[s_1, s_2]$ e derivabile nello stesso intervallo; l'equazione indefinita di equilibrio \eqref{eq:equzione_indefinita_equilibrio} può essere riscritta come
+\begin{equation}
+	\label{eq:equazione_indefinita_equilibrio_1}
+	\dfrac{dT}{ds}\,\hat{\tau} + T\,\dfrac{d\hat{\tau}}{ds}+ \overline{f} = 0
+\end{equation}
+
+Moltiplicando scalarmente i termini per il versore tangente si ha
+\[
+	\dfrac{dT}{ds}\,\hat{\tau}^2  + \overline{f}\cdot\hat{\tau} = 0
+\]
+e, per ottenere la variazione di $T$ in $s$ è sufficiente dividere per $\hat{\tau}^2$ e portare il secondo termine a secondo membro
+\[
+\dfrac{dT}{ds} = -\dfrac{\overline{f}\cdot\hat{\tau}}{\hat{\tau}^2}	
+\]
+Sostituendo quanto appena ricavato nella \eqref{eq:equazione_indefinita_equilibrio_1} si ottiene
+\[
+	-\dfrac{\overline{f}\cdot\hat{\tau}}{\hat{\tau}^2}\,\hat{\tau} + T\,\dfrac{d\hat{\tau}}{ds}+ \overline{f} = 0
+\]
+e riorganizzando il tutto
+\[
+\dfrac{d\hat{\tau}}{ds} = \dfrac{1}{T} \left(-\overline{f} + \dfrac{\overline{f}\cdot\hat{\tau}}{\hat{\tau}^2}\,\hat{\tau}\right)
+\]
+
+Ricordando, inoltre, la definizione di $\hat{\tau}$ si ottiene un sistema di 7 equazioni in 7 incognite ($P, T, \hat{\tau}$) funzioni di $s$
+\begin{equation}
+	\begin{aligned}[c]
+		\begin{cases}
+			\dfrac{dP}{ds} = \hat{\tau}\\[2ex]
+			\dfrac{d\hat{\tau}}{ds} = \dfrac{1}{T} \left(-\overline{f} + \dfrac{\overline{f}\cdot\hat{\tau}}{\hat{\tau}^2}\,\hat{\tau}\right)\\[2ex]
+			\dfrac{dT}{ds} = -\dfrac{\overline{f}\cdot\hat{\tau}}{\hat{\tau}^2}
+		\end{cases}
+	\end{aligned}
+	\qquad 
+	\begin{aligned}
+		&\forall s\in[s_1, s_2]\\
+		& P\in\mathbb{R}^3\\
+		&\hat{\tau} \neq 0
+	\end{aligned}
+\end{equation}
+
+La definizione di \emph{versore} impone che
+\[
+\left| \hat{\tau}(s)\right| = 1 \qquad \forall s\in[s_1, s_2]
+\]
+il che assicura, in un punto intermedio $s_1<s_0<s_2$
+\[
+	\left| \hat{\tau}(s_0)\right| = 1 
+\]
+e perciò
+\[
+\hat{\tau}(s_0)= \hat{\tau}_0,\qquad \left|\hat{\tau}_0\right|^2 = 1
+\]
+Applicando, così, le \textbf{condizioni iniziali} si perviene al seguente problema di Cauchy
+\begin{equation}
+	\label{eq:problema_cauchy}
+	\begin{cases}
+		\dfrac{dP}{ds} = \hat{\tau}\\[1.5ex]
+		\dfrac{d\hat{\tau}}{ds} = \dfrac{1}{T} \left(-\overline{f} + \dfrac{\overline{f}\cdot\hat{\tau}}{\hat{\tau}^2}\,\hat{\tau}\right)\\[1.5ex]
+		\dfrac{dT}{ds} = -\dfrac{\overline{f}\cdot\hat{\tau}}{\hat{\tau}^2}\\[1.5ex]
+		P(s_0) = P_0\\
+		\hat{\tau}(s_0)= \hat{\tau}_0\\
+		T(s_0)=T_0
+	\end{cases}
+\end{equation}
+ove la funzione nota $\overline{f}\in C^1$ in $s$, $P$, $\hat{\tau}$ e il dominio di definizione è
+\[
+\Omega = \left\{(s, P, \vtau, T)\in \mathbb{R}\times\mathbb{R}^3\times \mathbb{R}^3\texttt{\textbackslash}\left\{0\right\}\times \mathbb{R}^+\right\}
+\]
+
+Il teorema di esistenza e unicità applicato al problema di Cauchy \eqref{eq:problema_cauchy} assicura che la soluzione massimale esiste ed è unica.
+La soluzione ricercata è la curva funicolare (una e una sola) per cui il punto del filo $s_0$, di versore tangente $\vtau_0$, si colloca nella posizione $P_0$ nello spazio ed è sottoposto alla tensione $T_0$.
+
+\subsection{Condizioni al contorno}\label{section:condizioni_contorno}
+Il problema di Cauchy \eqref{eq:problema_cauchy} è stato risolto imponendo dei valori iniziali. Tuttavia, nella realtà, ci si trova di fronte a un problema di carattere diverso.
+
+Si consideri un filo di estremi $A$ e $B$, con lunghezza $L$ nota. La parametrizzazione della curva è definita nell'intervallo $[s_1, s_2] = [0, L]$, mentre gli estremi del filo sono definiti come
+\[
+P(s_1)	= A \qquad P(s_2)=B
+\]
+
+Applicando al problema i valori noti delle posizioni agli estremi del filo, ci si riconduce non più a un problema ai valori iniziali -- per cui si impongono i valori nella sola coordinata $s_0$ -- ma a un \textbf{problema a valori al contorno}.
+
+L'uso delle condizioni al contorno non assicura l'esistenza e l'unicità della soluzione. Infatti, il teorema di esistenza e unicità fa riferimento al solo problema ai valori iniziali. Il sistema può essere comunque risolto con metodi numerici nonostante la soluzione possa esistere (una o più di una) o meno.
+
+In conclusione si può osservare come, assegnando le posizioni degli estremi, si possano determinare le tensioni che gli essi generano
+\[
+s_1: T(s_1)\,\vtau(s_1)\qquad s_2: T(s_2)\,\vtau(s_2)
+\]
+e quindi le reazioni vincolari necessarie per l'equilibrio
+\[
+\overline{T}_A = -	T(s_1)\,\vtau(s_1)\qquad \overline{T}_B = -T(s_2)\,\vtau(s_2)
+\]
+
+\subsection{Calcolo delle tensioni}
+La tensione $T(s)$ può essere ricavata dall'equazione indefinita di equilibrio 
+\[
+\dfrac{d}{ds}\,\left[T(s)\,P'(s)\right] + \overline{f}(s, P(s), P'(s)) = 0
+\] 
+integrando tra l'estremo inferiore $s_1$ e un generico estremo $s \in [s_1, s_2]$
+\[
+T(s)\,P'(s) - T(s_1)\,P'(s_1) + \int_{s_1}^s \overline{f}(\xi, P(\xi), P'(\xi))\,d\xi = 0
+\]
+da cui si ricava facilmente
+\begin{align*}
+\overline{T}	(s) = T(s)\,P'(s) =& T(s_1)\,P'(s_1) - \int_{s_1}^s \overline{f}(\xi, P(\xi), P'(\xi))\,d\xi\\
+=& - \overline{T}_A - \int_{s_1}^s \overline{f}(\xi, P(\xi), P'(\xi))\,d\xi 
+\end{align*}
+
+
+
+\section{Campo di forze continue e parallele}\label{section:forze_continue_parallele}
+In presenza di un campo di forze di direzione costante, la densità di forza si può scrivere nella forma
+\[
+\overline{f}(s)	= f(s)\,\hat{u}
+\]
+dove $\hat{u}$ è un versore costante e $f(s)$ è una funzione continua nel suo intervallo di definizione $[s_1, s_2]$.
+
+L'equazione indefinita di equilibrio \eqref{eq:equzione_indefinita_equilibrio} diventa
+\[
+\dfrac{d}{ds}	(T\,\vtau) + f(s)\,\hat{u} = 0
+\]
+
+Allora, presa una coordinata $s_0 \in[s_1, s_2]$ 
+\[
+\dfrac{d}{ds}	\left[ T\,\vtau + \int_{s_0}^s f(\xi)\,d\xi\,\hat{u}\right] = 0\qquad \forall s\in[s_1, s_2]
+\]
+risulta un \emph{integrale primo}; questo implica che il termine all'interno della parantesi sia costante e valga
+\[
+\overline{R}_0 = T(s_0)	\,\vtau(s_0) = cost.
+\]
+ Si può, quindi, ricavare la tensione invertendo la formula
+ \[
+T(s)\,\vtau(s) = \overline{R}_0 - \int_{s_0}^s f(\xi)\,d\xi\,\hat{u}	 
+ \]
+ 
+ Isolando il versore tangente e ricordando la sua definizione si ottiene
+ \[
+\dfrac{dP}{ds}(s)	 = \vtau (s) = \dfrac{1}{T(s)}\left[\overline{R}_0 - \int_{s_0}^s f(\xi)\,d\xi\,\hat{u}\right]
+ \]
+e integrando tra gli estremi $s_0$ e $s$
+\begin{align*}
+P(s)	 - P(s_0) =& \int_{s_0}^s \dfrac{1}{T(s)}\left[\overline{R}_0 - \int_{s_0}^s f(\xi)\,d\xi\,\hat{u}\right]\,ds = \\
+=& \int_{s_0}^s \dfrac{1}{T(s)}\,\overline{R}_0 - \int_{s_0}^s \dfrac{1}{T(s)}\left[\int_{s_0}^s f(\xi)\,d\xi\right]\,ds\,\hat{u}
+\end{align*}
+
+Si evince che, fissato un punto $P(s_0)$, la posizione nello spazio del punto $P(s)$ in riferimento a $P(s_0)$ si può esprimere come combinazione lineare dei vettori $\overline{R}_0$ e $\hat{u}$ costanti nello spazio.
+
+La fune, soggetta esclusivamente a sollecitazioni di direzione costante, giace nel piano generato dai due vettori sopracitati.
+
+\section{Terna di riferimento standard}
+Una volta trovata l'equazione indefinita di equilibrio \eqref{eq:equzione_indefinita_equilibrio} è conveniente definire un sistema di riferimento cartesiano $Oxyz$. Nell'ipotesi di forze continue e parallele, sia il versore costante $\hat{u}$ coincidente con il versore $\hat{e}_2$ della terna considerata. 
+L'equazione vettoriale \eqref{eq:equzione_indefinita_equilibrio} può essere ricondotta a tre equazioni scalari nelle coordinate $x, y, z$ rispettivamente. Per quanto scritto nel paragrafo precedente, la fune giace nel piano $Oxy$; pertanto, l'equazione lungo la coordinata $z$ può essere trascurata. Il sistema che governa il problema, allora, è
+\begin{equation}
+	\label{eq:sistema_terna_standard}
+	\begin{cases}
+		\dfrac{d}{ds}\left(T\,\dfrac{dx}{ds}\right) = 0\\[1.5ex]
+		\dfrac{d}{ds}\left(T\,\dfrac{dy}{ds}\right) + f = 0
+	\end{cases}
+\end{equation}
+
+Integrando la prima delle \eqref{eq:sistema_terna_standard} si ha
+\begin{equation}
+	\label{eq:tensione_direzione_x}
+T\,\dfrac{dx}{ds} = c = cost.	
+\end{equation}
+
+Essendo
+\[
+\overline{T}\cdot\hat{e}_1	= T\,\vtau\cdot \hat{e}_1 = T\,\dfrac{dP}{ds}\cdot\hat{e}_1 = T\,\dfrac{dx}{ds} = c
+\]
+la componente del vettore tensione $\overline{T}$ lungo la direzione ortogonale al versore $\hat{u}$ risulta, quindi, costante. 
+
+In generale si assume la costante $c$ non negativa. Nell'eventualità che risulti nulla, si desume che 
+\[
+\dfrac{dx}{ds} = 0	\quad \Longrightarrow \quad x(s) = x_0\quad \forall s\in[s_1, s_2]
+\]  
+cioè, la fune si posizione su una retta parallela all'asse $y$.
+
+Nel caso più generale in cui $c>0$ ne consegue che sia $T(s)$ che $\frac{dx}{ds}(s)$ siano strettamente positivi per ogni $s\in[s_1, s_2]$. Isolando il termine di variazione di ascissa 
+\[
+\dfrac{dx}{ds}(s) = \dfrac{c}{T(s)}	> 0
+\]
+
+Ne risulta che $x$ è una funzione monotona crescente nella variabile $s\in[s_1, s_2]$ e invertibile, con inversa $s(x)$ di derivata prima
+\[
+\dfrac{ds}{dx}(x)	= \left.\left(\dfrac{dx}{ds}(s)\right)^{-1}\right|_{s=s(x)} = \left.\dfrac{T(s)}{c}\right|_{s=s(x)}
+\]
+
+Si può esprimere la $y$ in funzione della coordinata $x$ come funzione composta
+\[
+y = y(s) = y(s(x))	
+\]
+
+La funzione $y$ è derivabile con derivata prima 
+\begin{equation}
+	\label{eq:relazione_derivata}
+\dfrac{dy}{dx}(x) = \left.\dfrac{dy}{ds}(s)\right|_{s=s(x)}\,\dfrac{ds}{dx}(x) = \left.\dfrac{dy}{ds}(s)\right|_{s=s(x)}\,\left( \dfrac{dx}{ds}(x)\right)^{-1}
+\end{equation}
+
+Risolvendo la \eqref{eq:tensione_direzione_x}, isolando il termine di tensione
+\[
+T = c\,\left(\dfrac{dx}{ds}\right)^{-1}	
+\]
+e sostituendo quanto appena trovato nella relazione in direzione $y$ del sistema \eqref{eq:sistema_terna_standard} si ricava
+\[
+\dfrac{d}{ds}\,\left[c\,\left(\dfrac{dx}{ds}\right)^{-1}\,\dfrac{dy}{ds}\right] + f = 0	
+\]
+
+Utilizzando la relazione \eqref{eq:relazione_derivata} appena calcolata 
+\[
+\dfrac{d}{ds}\,\left(c\,\dfrac{dy}{dx}\right) + f = 0	
+\]
+ed essendo $s = s(x)$ 
+\[
+\dfrac{d}{dx}\,\left( c\,\dfrac{dy}{dx}\right)\,\dfrac{dx}{ds} + f = 0	
+\]
+che è equivalente a scrivere
+\[
+\dfrac{d}{dx}\,\left( c\,\dfrac{dy}{dx}\right)\,\left(\dfrac{ds}{dx}\right)^{-1} + f = 0
+\]
+
+Il differenziale dell'ascissa curvilinea è definito come
+\[
+ ds = \sqrt{dx^2 + dy^2} = \sqrt{dx\left(1 + \left(\dfrac{dy}{dx}\right)^2\right)} = \sqrt{1 + \left(\dfrac{dy}{dx}\right)^2}\,dx
+\]
+e quindi
+\[
+\dfrac{ds}{dx} = \sqrt{1 + \left(\dfrac{dy}{dx}\right)^2}	
+\]
+
+Sostituendo si ottiene la \emph{equazione cartesiana della funicolare}
+\begin{equation}
+	\label{eq:cartesiana_funicolare}
+	c\,\left[1+ \left(\dfrac{dy}{dx}\right)^2\right]^{-1/2}\,\dfrac{d^2 y}{dx^2} + f = 0
+\end{equation}
+
+L'equazione \eqref{eq:cartesiana_funicolare} può essere ridotta a forma normale ponendo $\frac{dy}{dx} = p$ in modo tale che si ricavi il sistema
+\[
+\begin{cases}
+	\dfrac{dy}{dx} = p\\[1.5ex]	
+	\dfrac{dp}{dx} = -\dfrac{1}{c}\,f\,\sqrt{1+p^2}\\[1.5ex]
+	\dfrac{ds}{dx} = \sqrt{1+p^2}
+\end{cases}\quad (y,p,s)\in\mathbb{R}^3
+\]
+
+dove $f$ deve essere riscritta in funzione della variabile $x$. Il sistema ammette una sola soluzione imponendo le condizioni iniziali in $x_0\in\mathbb{R}$
+\[
+\begin{cases}
+	\dfrac{dy}{dx} = p\\[1.5ex]	
+	\dfrac{dp}{dx} = -\dfrac{1}{c}\,f\,\sqrt{1+p^2}\\[1.5ex]
+	\dfrac{ds}{dx} = \sqrt{1+p^2}\\[1.5ex]
+	y(x_0) = y_0\\
+	p(x_0) = p_0\\
+	s(x_0) = s_0
+\end{cases}\quad (y_0,p_0,s_0)\in\mathbb{R}^3
+\]
+mentre il valore della costante $c$ si ottiene una volta noti $p(x_0) = p_0$ e $T(x_0) = T_0>0$
+\[
+c = T\,\dfrac{dx}{ds} = T\,\left(\dfrac{ds}{dx}\right)^{-1} = \dfrac{T_0}{\sqrt{1+p_0^2}}
+\]
+
+Infine, è sufficiente calcolare la tensione nel filo applicando la \eqref{eq:tensione_direzione_x} opportunamente manipolata
+\begin{equation}
+	\label{eq:calcolo_tensione}
+	T(x) = c\left[1+ \left(\dfrac{dy}{dx}\right)^2\right]^{1/2}
+\end{equation}
+
+\subsection{Problema a valori al contorno}
+Applicando il sistema di riferimento $Oxyz$ nel problema a valori al contorno trattato nel paragrafo \ref{section:condizioni_contorno} ci si imbatte in un problema: essendo noti gli estremi della fune $P(s_1)$ e $P(s_2)$ non è noto il valore costante della tensione $\overline{T}(s_0)$. 
+\[
+\overline{T}(s_0)	= T(s_0)\,\vtau (s_0)\cdot\hat{e}_1 = c 
+\]
+
+Il termine $c$ è una \emph{incognita} da aggiungere al sistema risolvente. Ricordando che, dall'equazione indefinita di equilibrio \eqref{eq:equazione_indefinita_equilibrio_1}
+\[
+	\dfrac{dT}{ds} = -\dfrac{\overline{f}\cdot\vtau}{\vtau^2}
+\]
+e che $\overline{f} = f\,\hat{u} = f\,\hat{e}_2$, il sistema finale è
+\[
+	\begin{cases}
+\dfrac{dx}{ds} = \tau_x\\[1.5ex]
+\dfrac{dy}{ds} = \tau_y\\[1.5ex]
+\dfrac{\tau_x}{ds} = \dfrac{1}{T}\,\dfrac{f\,\tau_y}{\tau_x^2 + \tau_y^2}\,\tau_x\\[1.5ex]
+\dfrac{\tau_y}{ds} = \dfrac{1}{T}\left(-f+\dfrac{f\,\tau_y}{\tau_x^2 + \tau_y^2}\,\tau_y\right)\\[1.5ex]
+\dfrac{dT}{ds} = -\dfrac{f\,\tau_y}{\tau_x^2 + \tau_y^2}
+	\end{cases}
+\]
+
+Imposte le 4 condizioni al contorno
+\begin{align*}
+	&x(s_1) = x_1\in\mathbb{R} \quad &&y(s_1) = y_1\in\mathbb{R}\\
+	&x(s_2) = x_2\in\mathbb{R} \quad &&y(s_2) = y_2\in\mathbb{R}
+\end{align*}
+il sistema è univocamente determinato.
