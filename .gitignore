@@ -2,4 +2,14 @@
 *.log
 *.pdf
 *.gz
-*.fls
+Tesi_01.fls
+Tesi_01.tmp
+Tesi_01.toc
+Tesi_01.xml
+Tesi_01.lof
+Tesi_01.lot
+Tesi_01.dvi
+Tesi_01.fdb_latexmk
+Tesi_01.synctex(busy)
+Tesi_01.toc
+
