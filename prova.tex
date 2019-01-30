@@ -1,0 +1,59 @@
+\documentclass{book}
+\usepackage[utf8]{inputenc}
+\usepackage{structuralanalysis}
+\usepackage{tikz}
+\usetikzlibrary{spy}
+\begin{document}
+
+\begin{figure}
+  \centering
+  
+  \begin{tikzpicture}[spy using outlines={circle,red,dashed, magnification=2,size=5cm, connect spies}]
+   
+     \draw [-latex] (0,0) -- (7,0) node [below] {$x$};
+     \draw [-latex] (0,0) -- (0,4) node [left] {$y$};
+     \node at (0,0) [below left] {$O$};
+ 
+     \draw [thick] (1,2) parabola  bend (3,1) (6,3);
+     \node at (1,2) [above left] {$A$};
+     \node at (6,3) [above right] {$B$};
+
+     \foreach \x in {1,1.5,...,6}
+     \draw [red!50, latex-, thick] (\x, \x*\x*7/30 - \x*43/30 +16/5) --+ (0,.8);
+
+     \begin{scope}[shift = {(0,.8)}]
+      \draw [red!50, thick] (1,2) parabola  bend (3,1) (6,3);
+      \node at (3,1) [color = red, above] {$\overline{f}(s)$};
+     \end{scope}
+ 
+   \draw [-latex, thick] (6.8,3)--(6.8,2) node [right] {$\overline{g}$};
+
+
+   \begin{scope}[shift={(-0.2,-5.8)}]
+    \node at (.4,2.5) {$P(s)$};
+    \node at (6.5,1.2) {$P(s+ds)$};
+    \draw [very thick, -latex] (3.2, 3.3) node [below right] {$\overline{f}\,ds$}--+ (0,-1.8);
+
+    \end{scope}
+
+   
+   \spy on (2, 1.5) in node  at (2,-4);
+
+   
+
+   
+  \end{tikzpicture}
+  
+  \caption{Problema della catenari omogenea}
+  \label{fig:problema_catenaria_omogenea}
+  
+  
+  
+ \end{figure}
+
+
+
+
+
+
+\end{document}
