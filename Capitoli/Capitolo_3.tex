@@ -10,6 +10,7 @@ In particolare, in questo capitolo, si tratteranno i seguenti casi:
 \end{itemize}
 
 \section{Equazione dei ponti sospesi}
+\label{section:equazione_ponti_sospesi}
 Il caso in esame è descritto da un'asta rigida rettilinea e omogenea di lunghezza $L$ e densità lineare $\lambda>0$, collegata a una fune inestensibile ($E\,A \to\infty$) e perfettamente flessibile ($E\,I=0$) mediante una serie di tiranti verticali. La fune è fissata agli estremi $A$ e $B$ con appositi vincoli (figura~\ref{fig:problema_ponte_sospeso}). 
 
 Si consideri un sistema di riferimento cartesiano nel piano $Oxy$ in modo tale che l'asta rigida giaccia sull'asse delle ascisse; inoltre, si consideri la gravità come $\overline{g} = - g\,\hat{e}_2$.
@@ -64,9 +65,10 @@ ed essendo $\left[1+\left(\frac{dy}{dx}\right)^2\right]^{-1/2}>0\quad\forall x\i
  c\,\dfrac{d^2y}{dx^2} - \lambda\,g = 0\qquad \Longrightarrow\qquad \dfrac{d^2y}{dx^2} = \dfrac{\lambda\,g}{c}
 \end{equation}
 detta \emph{equazione dei ponti sospesi} di soluzione generale 
-\[
+\begin{equation}
+\label{eq:equazione_ponte_sospeso}
  y(x) = \dfrac{\lambda\,g}{2 c}\,x^2 + a\,x+ b
-\]
+\end{equation}
 ove $a,b,c >0$ sono costanti arbitrarie. La soluzione è una curva parabolica con asse verticale e concavità verso l'alto.
 
 Le costanti $a,b$ e $c$ si determinano imponendo la posizione degli estremi $A$ e $B$
@@ -151,24 +153,153 @@ e sostituendo nella relazione imposta precedentemente
 \dfrac{dy}{dx}(x) = y'(x) = \sinh \eta = \sinh\,\left(\dfrac{\lambda\,g}{c}\,x + a\right) 
 \]
 
-Integrando in modo indefinito nella variabile $x$ si calcola la funzione $y(x)$ che conduce alla parametrizzazione della funicolare
-\[
+Integrando in modo indefinito nella variabile $x$ si calcola la funzione $y(x)$ che conduce alla parametrizzazione della funicolare, detta \emph{catenaria omogenea}
+\begin{equation}
+\label{eq:equazione_catenaria_omogenea}
 y(x) = \dfrac{c}{\lambda\,g}\,\cosh\left(\dfrac{\lambda\,g}{c}\,x +a\right) + b
-\]
+\end{equation}
 dove $a,b,c>0$ sono le tre costanti che devono essere calcolate imponendo le coordinate degli estremi $y(x_1) = y_1$, $y(x_2) = y_2$ e la lunghezza della fune
 \[
-  L = \int_{x_1}^{x_2} \left(1+y'(x)^2\right)^{1/2}\,dx  
+  L = \int_{x_1}^{x_2} \sqrt{1+y'(x)^2}\,dx  
 \]
 
+Sostituendo il valore di $y'(x)$ calcolato poco sopra
+\begin{align*}
+ L =& \int_{x_1}^{x_2} \left[1+\sinh^2\left(\dfrac{\lambda\,g}{c}\,x +a\right)\right]^{1/2}\,dx\\
+  =& \int_{x_1}^{x_2} \cosh\left(\dfrac{\lambda\,g}{c}\,x +a\right)\,dx = \dfrac{c}{\lambda\,g}\left[\sinh\left( \dfrac{\lambda\,g}{c}\,x +a\right)\right]_{x_1}^{x_2}
+\end{align*}
+
+Una volta calcolati i valori delle costanti $a, b$ e $c$ è possibile studiare la curva \eqref{eq:equazione_catenaria_omogenea}. Le derivate prima e seconda, rispettivamente, valgono
+\[
+\begin{cases}
+ y'(x) = \sinh\left(\dfrac{\lambda\,g}{c}\,x +a\right)\\
+ y''(x) = \dfrac{\lambda\,g}{c}\,\cosh\left(\dfrac{\lambda\,g}{c}\,x + a\right) \geq \dfrac{\lambda\,g}{c}\geq 0\quad \forall x \in[x_1, x_2] 
+ \end{cases}
+\]
+
+\begin{figure}
+  \centering
+  
+  \begin{tikzpicture}
+    \begin{axis}[
+      legend style = {at= {(0.5,-.1)}, anchor = north},
+      axis x line = bottom,
+      axis y line = left,
+      xlabel=$x$,
+      ylabel=$y(x)$,
+      xtick=\empty,
+      ytick=\empty,
+      domain=-2:2
+      ]
+
+\addplot[draw] {cosh(\x)};
+\addlegendentry{$ y(x)= \cosh x$};
+    \end{axis}
+
+  \end{tikzpicture}
+   \caption{Andamento della funzione coseno iperbolico}
+   \label{fig:andamento_coseno_iperbolico}
+  
+ \end{figure}
+
+Dalla derivata seconda si può constatare che la funicolare ha concavità rivolta verso l'alto, mentre, dalla derivata prima si possono studiare i punti critici
+\[
+ 0 = \sinh\left(\dfrac{\lambda\,g}{c}\,x +a\right) \quad \Longleftrightarrow \quad x = -\dfrac{c\,a}{\lambda\,g}
+\]
+essendo $\sinh(0) = 0$.
+
+Plottando il grafico della funzione coseno iperbolico (figura~\ref{fig:andamento_coseno_iperbolico}), si può notare una certa somiglianza con l'equazione dei ponti sospesi \eqref{eq:equzione_ponte_sospeso}.
+
+Traslando orizzontalmente la catenaria di un valore $\xi\in\mathbb{R}$ dal punto critico 
+\[x = -\dfrac{c\,a}{\lambda\,g} + \xi\]
+l'equazione cartesiana, ora scritta in funzione di $\xi$, assume la seguente forma
+\[
+ y(\xi) = b + \dfrac{c}{\lambda\,g}\cosh\left(\dfrac{\lambda\,g}{c}\,\xi\right)
+\]
+
+Espandendo in serie di Taylor fino al quarto ordine, nell'intorno di $\xi = 0$, il coseno iperbolico
+\[
+ y(\xi) = b + \dfrac{c}{\lambda\,g}\left[1 + \dfrac{1}{2}\left(\dfrac{\lambda\,g}{c}\,\xi\right)^2 + \dfrac{1}{24}\left(\dfrac{\lambda\,g}{c}\,\xi\right)^4 \right] + o\left(\dfrac{\lambda\,g}{c}\,\xi\right)^6
+\]
+
+Troncandola al secondo ordine, nell'intorno del punto critico, la funzione è ben approssimata da un arco di parabola (figura~\ref{fig:confronto_catenaria_parabola}).
 
 
 
+\begin{figure}
+  \centering
+  
+  \begin{tikzpicture}
+    \begin{axis}[
+      legend style = {at= {(0.5,-.1)}, anchor = north},
+      axis x line = center,
+      axis y line = center,
+      xlabel=$\xi$,
+      ylabel=$y(\xi)$,
+      xtick=\empty,
+      ytick=\empty,
+      ymin=0, 
+      xmin = -5, 
+      xmax = 5,
+      ymin= 0,
+      ymax=100,
+      ytick = {10.5},
+      yticklabel = $b$,
+      yticklabel style = {yshift = -.15cm}
+      ]
 
+\addplot[draw, red] {10.5+2*\x*\x + (1/24)*16*(\x)^4};
+\addlegendentry{Catenaria approssimata al $II$ ordine};
 
+\addplot[draw, blue] {10.5 + 2*\x*\x };
+\addlegendentry{Parabola};
+    \end{axis}
 
+  \end{tikzpicture}
+  \caption{Confronto tra catenaria approssimata e parabola}
+  \label{fig:confronto_catenaria_parabola}
+   
+  
+ \end{figure}
+ 
+I primi studi eseguiti da Leonardo da Vinci e Galileo Galilei sulla teoria dei fili  facevano riferimento alla sola parabola. In particolare, la teoria di Galileo tratta da \emph{Discorsi e dimostrazioni matematiche} non era totalmente errata, data la buona approssimazione tra le due curve.
 
+Il dibattito sulla catenaria portato avanti da Huygens portò a una rivalutazione della parabola di Galileo, in quanto non perfettamente in grado di descrivere  la fune di un ponte sospeso, a vantaggio della catenaria.
 
+Nell'applicazione ai ponti sospesi, però, l'approssimazione tra catenaria e parabola è sufficientemente accettabile, tenendo conto del fatto che la fune principale di un ponte sospeso è soggetta solo al proprio peso che risulta distribuito lungo il cavo in maniera uniforme, come visto nel paragrafo~\ref{section:equazione_ponti_sospesi}
 
  
- 
- 
+\section{Filo soggetto a sollecitazioni distribuite nulle}
+Nel caso particolare in cui sul filo non agiscono forze distribuite ($\overline{f}=0$), l'equazione indefinita di equilibrio \eqref{eq:equazione_indefinita_equilibrio} diventa semplicemente
+\[
+ \dfrac{d}{ds}(T\,\vtau)= 0 \quad \Longrightarrow\quad T\,\vtau = cost.
+\]
+che è soddisfatta se e solo se $T=cost.$ e $\vtau = cost.$
+
+La costanza del versore tangente, definito come
+\[
+ \vtau = \dfrac{dP}{ds}(s) = cost.
+\]
+consegue dal fatto che la parametrizzazione della funicolare descrive una retta
+\[
+ P(s) = P(s_0) + (s - s_0 )\,\vtau\qquad \forall s\in[s_1, s_2]
+\]
+con $s_0\in[s_1, s_2]$.
+
+Le tensioni agli estremi $A$ e $B$, allora, hanno ugual modulo e direzione ma verso opposto, come raffigurato in figura~\ref{fig:tensioni_forza_nulla}
+
+\begin{figure}
+ \centering
+ \begin{tikzpicture}
+ \draw (0,0) node [below] {$A$} -- (5,0) node [below] {$B$};
+ \draw [ultra thick, -latex] (0,0) --+ (-1.5,0) node [left] {$-\overline{T}$};
+ \draw [ultra thick, -latex] (5,0) --+ (1.5, 0) node [right] {$\overline{T}$};
+ \end{tikzpicture}
+ \caption{Tensioni agli estremi nel caso di sollecitazioni distribuite nulle}
+ \label{fig:tensioni_forza_nulla}
+\end{figure}
+
+
+\section{Filo soggetto a carichi concentrati}
+
+
