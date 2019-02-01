@@ -57,7 +57,7 @@ e sostituendo nella relazione della forza $f$
 
 L'equazione differenziale finale \eqref{eq:cartesiana_funicolare}, sostituendo a $f$ la relazione appena calcolata, diventa
 \begin{equation*}
- c\,\left[1+ \left(\dfrac{dy}{dx}\right)^2\right]^{-1/2}\,\dfrac{d^2 y}{dx^2} + -\lambda\,g\,\dfrac{dx}{ds} = -\lambda\,g\left[1+\left(\dfrac{dy}{dx}\right)^2\right]^{-1/2} = 0
+ c\,\left[1+ \left(\dfrac{dy}{dx}\right)^2\right]^{-1/2}\,\dfrac{d^2 y}{dx^2} -\lambda\,g\left[1+\left(\dfrac{dy}{dx}\right)^2\right]^{-1/2} = 0
 \end{equation*}
 ed essendo $\left[1+\left(\frac{dy}{dx}\right)^2\right]^{-1/2}>0\quad\forall x\in\mathbb{R}$ si ricava una equazione differenziale del secondo ordine nella coordinata $x$
 \begin{equation}
@@ -115,7 +115,7 @@ dove $\overline{f}$ è la densità di forza per unità di lunghezza, che vale
  \overline{f} = -\lambda\,g\,\hat{e}_2
 \]
 
-Anche in questo caso sono applicabili le formule per forze di medesima direzione \eqref{eq:forze_continue_parallele} sostituendo $f$ con $-\lambda\,g$.
+Anche in questo caso sono applicabili le formule per forze di medesima direzione sostituendo $f$ con $-\lambda\,g$.
 
 Considerando la costante $c>0$, l'equazione di equilibrio \eqref{eq:cartesiana_funicolare} è
 \[
@@ -183,7 +183,7 @@ Una volta calcolati i valori delle costanti $a, b$ e $c$ è possibile studiare l
   \begin{tikzpicture}
     \begin{axis}[
       legend style = {at= {(0.5,-.1)}, anchor = north},
-      axis x line = bottom,
+      axis x line = center,
       axis y line = left,
       xlabel=$x$,
       ylabel=$y(x)$,
@@ -208,7 +208,7 @@ Dalla derivata seconda si può constatare che la funicolare ha concavità rivolt
 \]
 essendo $\sinh(0) = 0$.
 
-Plottando il grafico della funzione coseno iperbolico (figura~\ref{fig:andamento_coseno_iperbolico}), si può notare una certa somiglianza con l'equazione dei ponti sospesi \eqref{eq:equzione_ponte_sospeso}.
+Plottando il grafico della funzione coseno iperbolico (figura~\ref{fig:andamento_coseno_iperbolico}), si può notare una certa somiglianza con la funicolare derivante dall'equazione dei ponti sospesi.
 
 Traslando orizzontalmente la catenaria di un valore $\xi\in\mathbb{R}$ dal punto critico 
 \[x = -\dfrac{c\,a}{\lambda\,g} + \xi\]
@@ -264,13 +264,14 @@ Troncandola al secondo ordine, nell'intorno del punto critico, la funzione è be
  
 I primi studi eseguiti da Leonardo da Vinci e Galileo Galilei sulla teoria dei fili  facevano riferimento alla sola parabola. In particolare, la teoria di Galileo tratta da \emph{Discorsi e dimostrazioni matematiche} non era totalmente errata, data la buona approssimazione tra le due curve.
 
-Il dibattito sulla catenaria portato avanti da Huygens portò a una rivalutazione della parabola di Galileo, in quanto non perfettamente in grado di descrivere  la fune di un ponte sospeso, a vantaggio della catenaria.
+Il dibattito sulla catenaria portato avanti da Huygens condusse a una rivalutazione della parabola di Galileo, in quanto non perfettamente in grado di descrivere  la fune di un ponte sospeso, a vantaggio della catenaria.
 
 Nell'applicazione ai ponti sospesi, però, l'approssimazione tra catenaria e parabola è sufficientemente accettabile, tenendo conto del fatto che la fune principale di un ponte sospeso è soggetta solo al proprio peso che risulta distribuito lungo il cavo in maniera uniforme, come visto nel paragrafo~\ref{section:equazione_ponti_sospesi}
 
- 
+%*************************************************************************
+%************************************************************************ 
 \section{Filo soggetto a sollecitazioni distribuite nulle}
-Nel caso particolare in cui sul filo non agiscono forze distribuite ($\overline{f}=0$), l'equazione indefinita di equilibrio \eqref{eq:equazione_indefinita_equilibrio} diventa semplicemente
+Nel caso particolare in cui sul filo non agiscono forze distribuite ($\overline{f}=0$), l'equazione indefinita di equilibrio \eqref{eq:equzione_indefinita_equilibrio} diventa semplicemente
 \[
  \dfrac{d}{ds}(T\,\vtau)= 0 \quad \Longrightarrow\quad T\,\vtau = cost.
 \]
@@ -301,5 +302,111 @@ Le tensioni agli estremi $A$ e $B$, allora, hanno ugual modulo e direzione ma ve
 
 
 \section{Filo soggetto a carichi concentrati}
+Si consideri ora una fune di peso trascurabile soggetta a un sistema di forze concentrate $\overline{F}_0, \overline{F}_1, \dots,  \overline{F}_{N+1}$, applicate rispettivamente nei punti $P_0, P_1, \dots, P_{N+1}$ (dove $P_0$ e $P_{N+1}$ sono gli estremi della fune), di risultante nulla. 
+\[
+\left|\overline{R}\right| = \sqrt{\left(\sum_{i=0}^{N+1}F_{x_i}\right)^2 +\left(\sum_{i=0}^{N+1}F_{y_i}\right)^2} = 0
+\]
 
+Il sistema di riferimento adottato è quello cartesiano ortogonale con ipotesi che la fune si mantenga nel piano coordinato $Oxy$. Ne consegue che le forze puntuali hanno componente nulla lungo la direzione $z$.
+
+Sono valide le equazioni indefinite di equilibrio \eqref{eq:sistema_terna_standard}, riscritte in maniera appropriata
+\[
+\begin{cases} 
+  \dfrac{d}{ds}\left(T\,\dfrac{dx}{ds}\right) + R_x = 0\\[1.5ex]
+  \dfrac{d}{ds}\left(T\,\dfrac{dy}{ds}\right) + R_y = 0
+\end{cases}
+\]
+ed essendo $R_x = R_y = 0$
+\begin{equation}
+\label{eq:equazione_indefinita_equilibrio_concentrati}
+\begin{cases} 
+  \dfrac{d}{ds}\left(T\,\dfrac{dx}{ds}\right) = 0\\[1.5ex]
+  \dfrac{d}{ds}\left(T\,\dfrac{dy}{ds}\right) = 0
+\end{cases}
+\end{equation}
+
+Integrando in $s$ entrambe le equazioni
+\[
+\begin{cases} 
+T\,\dfrac{dx}{ds} = c_1\\[1.5ex]
+  T\,\dfrac{dy}{ds} = c_2
+\end{cases}
+\]
+dove $c_1$ e $c_2$ sono costanti arbitrarie. Si può applicare quanto visto in precedenza nella teoria dei fili, essendo
+\[
+\begin{cases}
+\overline{T}\cdot\hat{e}_1 = T\,\vtau\,\hat{e}_1 = T\,\dfrac{dP}{ds}\,\hat{e}_1 = T\,\dfrac{dx}{ds} = c_1\\[1.5ex]
+\overline{T}\cdot\hat{e}_2 = T\,\vtau\,\hat{e}_2 = T\,\dfrac{dP}{ds}\,\hat{e}_2 = T\,\dfrac{dy}{ds} = c_2
+\end{cases}
+\]
+
+Postulando le costanti $c_1$ e $c_2$ strettamente positive e considerando l'ascissa curvilinea $s(x)$ una funzione della coordinata $x$, si può scrivere
+\[
+\dfrac{ds}{dx} = \left.\left(\dfrac{dx}{ds}\right)^{-1}\right|_{s = s(x)} 
+\]
+
+Applicando quanto appena ricavato alla prima equazione integrata e isolando la derivata prima
+\[
+\dfrac{ds}{dx} = \left.\dfrac{T(s)}{c_1}\right|_{s = s(x)}
+\]
+
+Ora, ipotizzando $y = y(s(x))$
+\[
+\dfrac{dy}{dx} = \dfrac{dy}{ds}\,\dfrac{ds}{dx} = \dfrac{dy}{ds}\,\left(\dfrac{dx}{ds}\right)^{-1}
+\]
+
+La tensione può essere ricavata da
+\[
+T = c_1\left(\dfrac{dx}{ds}\right)^{-1}
+\]
+e sostituendolo nella equazione lungo $y$
+\[
+T\,\dfrac{dy}{ds} = c_1\left(\dfrac{dx}{ds}\right)^{-1}\,\dfrac{dy}{ds} = c_2
+\]
+e quindi, per quanto visto poco sopra
+\begin{equation}
+\label{eq:tratto_filo_costante}
+\dfrac{dy}{dx} = c_3 = cost.\qquad \forall x\in[x_i, x_{i+1}]
+\end{equation}
+dove $c_3$ è una costante diversa da $c_1$ e $c_2$.
+
+\begin{figure}
+  \centering
+  
+  \begin{tikzpicture}
+  \begin{scope}[shift = {(0,1)}]
+  \draw[-latex] (0,0) node[below] {$O$} -- (7,0) node [below] {$x$};
+  \draw[-latex] (0,0) -- (0,5) node [left] {$y$};
+  \end{scope}
+  
+  \draw  (1,4) -- (2,3) -- (3,2.5) -- (4,2.5) -- (5,3) -- (6,4);
+  
+  \draw [-latex, very thick] (1,4) --+(-.5,1) node [right] {$\overline{F}_0$};
+  \draw [latex-, very thick] (2,3) --+(.5,1) node [right] {$\overline{F}_1$}; 
+  \draw [latex-, very thick] (3,2.5) --+(0,1) node [right] {$\overline{F}_2$}; 
+  \draw [latex-, very thick] (4,2.5) --+(0,1) node [right] {$\overline{F}_3$};
+  \draw [latex-, very thick] (5,3) --+(-0.5,1) node [right] {$\overline{F}_4$}; 
+  \draw [-latex, very thick] (6,4) --+(0.5,1) node [right] {$\overline{F}_5$}; 
+   
+
+
+
+  \end{tikzpicture}
+
+\caption{Configurazione della fune soggetta a 5 forze concentrate}
+\label{fig:fune_forze_concentrate}
+   
+\end{figure}
+
+La \eqref{eq:tratto_filo_costante} implica che, tra una sollecitazione puntuale e l'altra, il filo ha pendenza costante e risulta un segmento lineare, come è possibile vedere in figura~\ref{fig:fune_forze_concentrate}.
+
+Per il calcolo della tensione, è sufficiente isolare il termine $T$ come segue
+\[
+T(x) = c_1\,\dfrac{ds}{dx} = c_1\,\sqrt{1+\left(\dfrac{dy}{dx}\right)^2}
+\]
+ma poiché $c_1 = cost.$ e $\frac{dy}{dx} = cost.$ la tensione $T_{i+1}$ riferita al tratto di filo compreso tra $P_i$ e $P_{i+1}$ risulta costante.
+\begin{equation}
+\label{eq:tensione_costante}
+T_i(x) = cost.\qquad \forall x \in [x_i, x_{i+1}]
+\end{equation}
 

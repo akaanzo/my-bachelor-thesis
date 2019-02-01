@@ -34,7 +34,7 @@ Un filo ideale può assumere qualsiasi configurazione descritta da una curva $C^
 	Si assume, quindi, rigidezza flessionale nulla ($E\,I\simeq 0$).
 	\item la lunghezza $L$ del filo è costante; le configurazioni $P(\lambda)$ devono soddisfare la condizione di \emph{inestensibilità}
 	\[
-	\int_{\lambda_1}^{\lambda_2} \left| \dfrac{dP}{d\lambda}(\lambda) \right|\,d\lambda = \int_{\lambda_1}^{\lambda_2} [\dot{P}(\lambda)^2]^{1/2}\, d\lambda = L = cost
+	\int_{\lambda_1}^{\lambda_2} \left| \dfrac{dP}{d\lambda}(\lambda) \right|\,d\lambda = \int_{\lambda_1}^{\lambda_2} [\dot{P}(\lambda)^2]^{1/2}\, d\lambda = L = cost.
 	\]
 	la cui impone che il filo, anche se sottoposto a sollecitazioni, non subisce variazioni di lunghezza. Anche in questo caso si tratta di una approssimazione della realtà poiché una fune reale, soggetta a sollecitazioni più o meno grandi, si allunga secondo il legame costitutivo del materiale.
 
@@ -57,7 +57,7 @@ Nella realtà, avendo -- il filo -- un diametro non infinitesimo, il momento gen
 Infine, l'arbitrarietà del valore della tensione (che si impone di sola trazione) comporterebbe un carico di rottura del filo infinito, condizione che non è assolutamente applicabile in caso di fune reale.
 
 \subsection*{Osservazione}
-Mentre la tensione $\overline{T}(\lambda)$ è definita come una reazione vincolare interna, agli estremi, i termini $\overline{T}(\lambda_1)$ e $\overline{T}(\lambda_2)$ sono descritte come forze attive che interagiscono con l'esterno come, per esempio, un vincolo; in questo caso le tensioni $\overline{T}(\lambda_1)$ e $\overline{T}(\lambda_2)$ si identificano con i \emph{cimenti dinamici}.
+Mentre la tensione $\overline{T}(\lambda)$ è definita come una reazione vincolare interna, agli estremi, i termini $\overline{T}(\lambda_1)$ e $\overline{T}(\lambda_2)$ sono descritti come forze attive che interagiscono con l'esterno come, per esempio, un vincolo; in questo caso le tensioni $\overline{T}(\lambda_1)$ e $\overline{T}(\lambda_2)$ si identificano con i \emph{cimenti dinamici}.
 
 Definito il triedro di Frenet in un punto $P(\lambda)$ della curva, si può riscrivere la tensione come
 \[
@@ -94,7 +94,7 @@ Il postulato delle reazione vincolari in termini generali è descritto dalla seg
 \[
 m_i\,\ddot{P}_i = \overline{F}_i(t,P_i(t), \dot{P}_i(t)) + \overline{\Phi}_i\qquad i=1,\dots,N
 \]
-Applicandolo alla configurazione $P_0$, indicato precedentemente come in quiete, si ha
+Applicandolo alla configurazione $P_0$, indicata precedentemente come in quiete, si ha
 \begin{equation}
 	\label{eq:equilibrio_p0}
 	0 = \overline{F}_i (t, P_0, 0) + \overline{\Phi}_i\qquad i = 1,\dots, N\quad\forall t\in\mathbb{R}
@@ -323,7 +323,7 @@ Il teorema di esistenza e unicità applicato al problema di Cauchy \eqref{eq:pro
 La soluzione ricercata è la curva funicolare (una e una sola) per cui il punto del filo $s_0$, di versore tangente $\vtau_0$, si colloca nella posizione $P_0$ nello spazio ed è sottoposto alla tensione $T_0$.
 
 \subsection{Condizioni al contorno}\label{section:condizioni_contorno}
-Il problema di Cauchy \eqref{eq:problema_cauchy} è stato risolto imponendo dei valori iniziali. Tuttavia, nella realtà, ci si trova di fronte a un problema di carattere diverso.
+Il problema di Cauchy \eqref{eq:problema_cauchy} è stato risolto imponendo dei valori iniziali. Tuttavia, nella realtà, ci si può trovare di fronte a un problema di carattere diverso.
 
 Si consideri un filo di estremi $A$ e $B$, con lunghezza $L$ nota. La parametrizzazione della curva è definita nell'intervallo $[s_1, s_2] = [0, L]$, mentre gli estremi del filo sono definiti come
 \[
@@ -334,7 +334,7 @@ Applicando al problema i valori noti delle posizioni agli estremi del filo, ci s
 
 L'uso delle condizioni al contorno non assicura l'esistenza e l'unicità della soluzione. Infatti, il teorema di esistenza e unicità fa riferimento al solo problema ai valori iniziali. Il sistema può essere comunque risolto con metodi numerici nonostante la soluzione possa esistere (una o più di una) o meno.
 
-In conclusione si può osservare come, assegnando le posizioni degli estremi, si possano determinare le tensioni che gli essi generano
+In conclusione si può osservare come, assegnando le posizioni degli estremi, si possano determinare le tensioni che essi generano
 \[
 s_1: T(s_1)\,\vtau(s_1)\qquad s_2: T(s_2)\,\vtau(s_2)
 \]
@@ -520,7 +520,7 @@ Infine, è sufficiente calcolare la tensione nel filo applicando la \eqref{eq:te
 \subsection{Problema a valori al contorno}
 Applicando il sistema di riferimento $Oxyz$ nel problema a valori al contorno trattato nel paragrafo \ref{section:condizioni_contorno} ci si imbatte in un problema: essendo noti gli estremi della fune $P(s_1)$ e $P(s_2)$ non è noto il valore costante della tensione $\overline{T}(s_0)$. 
 \[
-\overline{T}(s_0)	= T(s_0)\,\vtau (s_0)\cdot\hat{e}_1 = c 
+\overline{T}(s_0)\cdot \hat{e}_1	= T(s_0)\,\vtau (s_0)\cdot\hat{e}_1 = c 
 \]
 
 Il termine $c$ è una \emph{incognita} da aggiungere al sistema risolvente. Ricordando che, dall'equazione indefinita di equilibrio \eqref{eq:equazione_indefinita_equilibrio_1}
@@ -532,8 +532,8 @@ e che $\overline{f} = f\,\hat{u} = f\,\hat{e}_2$, il sistema finale è
 	\begin{cases}
 \dfrac{dx}{ds} = \tau_x\\[1.5ex]
 \dfrac{dy}{ds} = \tau_y\\[1.5ex]
-\dfrac{\tau_x}{ds} = \dfrac{1}{T}\,\dfrac{f\,\tau_y}{\tau_x^2 + \tau_y^2}\,\tau_x\\[1.5ex]
-\dfrac{\tau_y}{ds} = \dfrac{1}{T}\left(-f+\dfrac{f\,\tau_y}{\tau_x^2 + \tau_y^2}\,\tau_y\right)\\[1.5ex]
+\dfrac{d\tau_x}{ds} = \dfrac{1}{T}\,\dfrac{f\,\tau_y}{\tau_x^2 + \tau_y^2}\,\tau_x\\[1.5ex]
+\dfrac{d\tau_y}{ds} = \dfrac{1}{T}\left(-f+\dfrac{f\,\tau_y}{\tau_x^2 + \tau_y^2}\,\tau_y\right)\\[1.5ex]
 \dfrac{dT}{ds} = -\dfrac{f\,\tau_y}{\tau_x^2 + \tau_y^2}
 	\end{cases}
 \]
