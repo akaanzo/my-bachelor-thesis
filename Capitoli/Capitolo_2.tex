@@ -23,7 +23,7 @@ Un filo ideale può assumere qualsiasi configurazione descritta da una curva $C^
 	\begin{equation*}
 		\dfrac{d\hat{\tau}}{ds} = \dfrac{1}{\rho}\,\hat{n} \hspace*{2cm} \dfrac{d\hat{b}}{ds} = - \dfrac{1}{\sigma}\,\hat{n}
 	\end{equation*}
-	ove $s$ è l'ascissa curvilinea e $\hat{\tau}$, $\hat{n}$, $\hat{b} = \hat{\tau} \wedge \hat{n}$ sono rispettivamente i versori tangente, normale e binormale alla curva nella posizione $P(s)$.
+	dove $s$ è l'ascissa curvilinea e $\hat{\tau}$, $\hat{n}$, $\hat{b} = \hat{\tau} \wedge \hat{n}$ sono rispettivamente i versori tangente, normale e binormale alla curva nella posizione $P(s)$.
 
 	L'arbitrarietà di questi valori rende il filo ideale perfettamente deformabile sia a flessione che a torsione, cosa che non accade in una fune reale: infatti, curvature molto grandi, genererebbero un momento flettente elevato nelle fibre interne del materiale che causerebbe la rottura dell'elemento. In particolare, curvatura e momento flettente sono legati dalla seguente legge caratteristica
 	\[
@@ -48,22 +48,22 @@ Considerando un intervallo $\lambda\in[\lambda_1, \lambda_2]$ si postula che le 
 
 \input{Immagini/filo_2.1}
 
-Estendendo quanto appena visto a una fune ideale di sezione non puntuale e tagliando in corrispondenza di $P(\lambda)$, per il \emph{principio di azione e reazione}, il tratto residuo genera una tensione uguale ed opposta, come visibile in figura~\ref{fig:tensione_fune_ideale}.
+Estendendo quanto appena visto a una fune ideale di sezione non puntuale e tagliando in corrispondenza di $P(\lambda)$, per il \emph{principio di azione e reazione}, il tratto residuo genera una tensione uguale ed opposta, come mostrato in figura~\ref{fig:tensione_fune_ideale}.
 
-Poiché il filo ideale è un elemento puntuale, il momento delle reazioni vincolari interne agenti su ogni sezione -- rispetto al baricentro -- risulta nullo. Ne consegue la condizione di \emph{perfetta flessibilità}, descritta poc'anzi, che è rafforzata dalla richiesta di  resistenza nulla a sforzi di taglio da parte del filo dovuta al fatto che la tensione è tangente al supporto del filo.
+Poiché il filo ideale è un elemento a sezione puntuale, il momento delle reazioni vincolari interne agenti su ogni sezione -- rispetto al baricentro -- risulta nullo. Ne consegue la condizione di \emph{perfetta flessibilità}, descritta poc'anzi, che è rafforzata dalla richiesta di  resistenza nulla a sforzi di taglio da parte del filo dovuta al fatto che la tensione è tangente al supporto del filo.
 
-Nella realtà, avendo -- il filo -- un diametro non infinitesimo, il momento generato dalle reazioni vincolari interne è, generalmente, diverso da zero.
+Nella realtà, avendo il filo un diametro non infinitesimo, il momento generato dalle reazioni vincolari interne è, generalmente, diverso da zero.
 
 Infine, l'arbitrarietà del valore della tensione (che si impone di sola trazione) comporterebbe un carico di rottura del filo infinito, condizione che non è assolutamente applicabile in caso di fune reale.
 
 \subsection*{Osservazione}
-Mentre la tensione $\overline{T}(\lambda)$ è definita come una reazione vincolare interna, agli estremi, i termini $\overline{T}(\lambda_1)$ e $\overline{T}(\lambda_2)$ sono descritti come forze attive che interagiscono con l'esterno come, per esempio, un vincolo; in questo caso le tensioni $\overline{T}(\lambda_1)$ e $\overline{T}(\lambda_2)$ si identificano con i \emph{cimenti dinamici}.
+Mentre la tensione $\overline{T}(\lambda)$ è definita come una reazione vincolare interna, agli estremi, i termini $\overline{T}(\lambda_1)$ e $\overline{T}(\lambda_2)$ sono descritti come forze attive che interagiscono con l'esterno come, per esempio, un vincolo; in questo caso le tensioni $\overline{T}(\lambda_1)$ e $\overline{T}(\lambda_2)$ si identificano con i \emph{cimenti dinamici} (o, in particolare, statici).
 
 Definito il triedro di Frenet in un punto $P(\lambda)$ della curva, si può riscrivere la tensione come
 \[
 	\overline{T}(\lambda) = T(\lambda)\,\hat{\tau}(\lambda)
 \]
-ove
+dove
 \[
 T(\lambda) = \left|\overline{T}(\lambda)\right|\geq 0 \quad \lambda\in[\lambda_1, \lambda_2]
 \]
@@ -86,11 +86,11 @@ Esistono due diverse tipologie di sollecitazioni che possono essere applicate al
 \section{Condizione di equilibrio}
 Per un sistema costituito da $N$ punti materiali ${P_1, \dots, P_N}$ soggetto a sollecitazioni $\overline{F}_i (t, P_i, \dot{P}_i),~ i=1,\dots,N$ la configurazione $P_0$ è di equilibrio \emph{se e solo se} la quiete in $P_0$, definita come
 \[
-P(t) = P_0\quad \forall t\in\mathbb{R}
+P(t) = P_0\quad \forall t\in\mathbb{R},
 \]
 è un \emph{moto naturale} del sistema, cioè è soluzione delle equazioni del moto.
 
-Il postulato delle reazione vincolari in termini generali è descritto dalla seguente equazione
+Il postulato delle reazioni vincolari in termini generali è descritto dalla seguente equazione
 \[
 m_i\,\ddot{P}_i = \overline{F}_i(t,P_i(t), \dot{P}_i(t)) + \overline{\Phi}_i\qquad i=1,\dots,N
 \]
@@ -135,7 +135,7 @@ A questo punto, dividendo entrambi i membri per $\delta s$ e calcolando il segue
 \[
 \lim_{\delta s\to 0} \left[ \dfrac{\overline{T}(s+\delta s)-\overline{T}(s)}{\delta s} + \sum_{i=1}^3 \hat{e}_i\cdot \overline{f}(s+\theta_i\,\delta s)\,\hat{e}_i \right] = 0
 \]
-Poiché $\overline{f}$ è una funzione continua, il limite esiste e vale
+si ha che siccome $\overline{f}$ è una funzione continua, detto limite esiste e vale
 \[
 \lim_{\delta s \to 0} \overline{f}(s+\theta_i\,\delta s) = \lim_{\delta s \to 0} \overline{f}(s+\delta s) = \overline{f}(s)
 \]
@@ -203,7 +203,7 @@ Le sole equazioni cardinali della statica \eqref{eq:prima_eq_cardinale_statica} 
 
 La sufficienza della suddetta condizione viene garantita richiedendo che le tensioni si mantengano di segno non negativo; perciò
 \[
-T(s)\geq 0\qquad \forall s\in(s_1, s_2)
+T(s)\geq 0\qquad \forall s\in(s_1, s_2),
 \]
 dove le tensioni sono dirette in modo concorde all'ascissa curvilinea $s$.
 
@@ -219,12 +219,12 @@ In definitiva, nel caso di filo soggetto a sollecitazioni distribuite di densit�
 \end{equation}
 
 \section{Equazioni intrinseche dell'equilibrio}
-Nelle ipotesi di curva biregolare  e di modulo della tensione  $T(s)$ strettamente positivo,  si può ridurre il sistema \eqref{eq:cns_equilibrio} a una unica equazione
+Nelle ipotesi di curva biregolare  e di modulo della tensione  $T(s)$ strettamente positivo,  si può ridurre il sistema \eqref{eq:cns_equilibrio} a un'unica equazione
 \begin{equation}
 	\label{eq:equzione_indefinita_equilibrio}
 	\dfrac{d}{ds}(T\,\hat{\tau}) + \overline{f}(s) = 0
 \end{equation}
-detta \emph{equazione indefinita di equilibrio}. Sviluppando la derivata del prodotto presente nel primo termine si ottiene
+detta \emph{equazione indefinita di equilibrio}. Sviluppando la derivata del prodotto presente nel primo termine si ottiene infatti
 \[
 	\dfrac{dT}{ds}\,\hat{\tau} + T\,\dfrac{d\hat{\tau}}{ds} + \overline{f}(s) = 0
 \]
@@ -275,6 +275,7 @@ e riorganizzando il tutto
 
 Ricordando, inoltre, la definizione di $\hat{\tau}$ si ottiene un sistema di 7 equazioni in 7 incognite ($P, T, \hat{\tau}$) funzioni di $s$
 \begin{equation}
+\label{eq:sistema_risolvente_generale}
 	\begin{aligned}[c]
 		\begin{cases}
 			\dfrac{dP}{ds} = \hat{\tau}\\[2ex]
@@ -290,18 +291,29 @@ Ricordando, inoltre, la definizione di $\hat{\tau}$ si ottiene un sistema di 7 e
 	\end{aligned}
 \end{equation}
 
+Moltiplicando scalarmente la seconda delle \eqref{eq:sistema_risolvente_generale} per $\vtau$ 
+\[
+ \vtau\cdot\dfrac{d\vtau}{ds} = \dfrac{1}{T}\left( -\overline{f}\cdot\vtau + \overline{f}\cdot\vtau\,\dfrac{\vtau^2}{\vtau^2}\right) = 0
+\]
+risulta un prodotto scalare identicamente nullo. Si può scrivere allora
+\[
+ \vtau\cdot\dfrac{d\vtau}{ds} = \dfrac{1}{2}\,\dfrac{d}{ds}(\vtau^2) = 0\quad \Longrightarrow\quad \vtau^2 = cost.
+\]
+
 La definizione di \emph{versore} impone che
 \[
 \left| \hat{\tau}(s)\right| = 1 \qquad \forall s\in[s_1, s_2]
 \]
-il che assicura, in un punto intermedio $s_1<s_0<s_2$
+il che assicura, in ogni punto intermedio $s_1<s_0<s_2$
 \[
 	\left| \hat{\tau}(s_0)\right| = 1 
 \]
-e perciò
+e perciò, fissando il versore in $s_0$
 \[
 \hat{\tau}(s_0)= \hat{\tau}_0,\qquad \left|\hat{\tau}_0\right|^2 = 1
 \]
+essendo $\vtau^2$ costante, si garantisce la validità del teorema di esistenza e unicità della soluzione.
+
 Applicando, così, le \textbf{condizioni iniziali} si perviene al seguente problema di Cauchy
 \begin{equation}
 	\label{eq:problema_cauchy}

@@ -5,7 +5,7 @@
 \documentclass[11pt, twosides,openright,titlepage,numbers=noenddot,
 headinclude,footinclude,cleardoublepage=empty,abstract=on,
 BCOR=5mm,paper=a4,fontsize=11pt,
-%draft
+draft
 ]{scrbook}
 
 \input{tesi-config}
@@ -21,7 +21,7 @@ BCOR=5mm,paper=a4,fontsize=11pt,
 \usetikzlibrary{decorations.markings}
 
 \tikzset{forcedist/.style={decorate, decoration={markings,
-			mark=between positions 0 and 1 step 0.029 with {\draw[->] (0,0) -- (0,-#1); }}}}
+			mark=between positions 0.015 and .97 step 0.025 with {\draw[-stealth] (0,0) -- (0,-#1); }}}}
 
 \usepackage{enumitem}
 
