@@ -344,7 +344,7 @@ P(s_1)	= A \qquad P(s_2)=B
 
 Applicando al problema i valori noti delle posizioni agli estremi del filo, ci si riconduce non più a un problema ai valori iniziali -- per cui si impongono i valori nella sola coordinata $s_0$ -- ma a un \textbf{problema a valori al contorno}.
 
-L'uso delle condizioni al contorno non assicura l'esistenza e l'unicità della soluzione. Infatti, il teorema di esistenza e unicità fa riferimento al solo problema ai valori iniziali. Il sistema può essere comunque risolto con metodi numerici nonostante la soluzione possa esistere (una o più di una) o meno.
+L'uso delle condizioni al contorno non assicura l'esistenza e l'unicità della soluzione. Infatti, il teorema di esistenza e unicità fa riferimento al solo problema ai valori iniziali. Il sistema può essere affrontato con metodi numerici nonostante non si sia certi a priori dell'esistenza e dell'unicità della soluzione.
 
 In conclusione si può osservare come, assegnando le posizioni degli estremi, si possano determinare le tensioni che essi generano
 \[
@@ -388,11 +388,11 @@ Allora, presa una coordinata $s_0 \in[s_1, s_2]$
 \[
 \dfrac{d}{ds}	\left[ T\,\vtau + \int_{s_0}^s f(\xi)\,d\xi\,\hat{u}\right] = 0\qquad \forall s\in[s_1, s_2]
 \]
-risulta un \emph{integrale primo}; questo implica che il termine all'interno della parantesi sia costante e valga
+si riconosce il ricorrere di un \emph{integrale primo}; questo implica che il termine all'interno della parantesi sia costante e valga
 \[
-\overline{R}_0 = T(s_0)	\,\vtau(s_0) = cost.
+\overline{R}_0 = T(s_0)	\,\vtau(s_0) = cost.\quad \forall s_0 \in[s_1, s_2]
 \]
- Si può, quindi, ricavare la tensione invertendo la formula
+ Si può quindi ricavare la tensione invertendo la formula
  \[
 T(s)\,\vtau(s) = \overline{R}_0 - \int_{s_0}^s f(\xi)\,d\xi\,\hat{u}	 
  \]
@@ -438,21 +438,20 @@ In generale si assume la costante $c$ non negativa. Nell'eventualità che risult
 \[
 \dfrac{dx}{ds} = 0	\quad \Longrightarrow \quad x(s) = x_0\quad \forall s\in[s_1, s_2]
 \]  
-cioè, la fune si posizione su una retta parallela all'asse $y$.
+cioè, la fune si posiziona su una retta parallela all'asse $y$.
 
 Nel caso più generale in cui $c>0$ ne consegue che sia $T(s)$ che $\frac{dx}{ds}(s)$ siano strettamente positivi per ogni $s\in[s_1, s_2]$. Isolando il termine di variazione di ascissa 
 \[
-\dfrac{dx}{ds}(s) = \dfrac{c}{T(s)}	> 0
+\dfrac{dx}{ds}(s) = \dfrac{c}{T(s)}	> 0,
 \]
-
-Ne risulta che $x$ è una funzione monotona crescente nella variabile $s\in[s_1, s_2]$ e invertibile, con inversa $s(x)$ di derivata prima
+ne risulta che $x$ è una funzione monotona crescente nella variabile $s\in[s_1, s_2]$ e invertibile, con inversa $s(x)$ di derivata prima
 \[
 \dfrac{ds}{dx}(x)	= \left.\left(\dfrac{dx}{ds}(s)\right)^{-1}\right|_{s=s(x)} = \left.\dfrac{T(s)}{c}\right|_{s=s(x)}
 \]
 
 Si può esprimere la $y$ in funzione della coordinata $x$ come funzione composta
 \[
-y = y(s) = y(s(x))	
+y = y(x) = y(s(x))	
 \]
 
 La funzione $y$ è derivabile con derivata prima 
@@ -465,7 +464,7 @@ Risolvendo la \eqref{eq:tensione_direzione_x}, isolando il termine di tensione
 \[
 T = c\,\left(\dfrac{dx}{ds}\right)^{-1}	
 \]
-e sostituendo quanto appena trovato nella relazione in direzione $y$ del sistema \eqref{eq:sistema_terna_standard} si ricava
+e sostituendo quanto appena trovato nella relazione in direzione $y$ del sistema \eqref{eq:sistema_terna_standard}, si ricava
 \[
 \dfrac{d}{ds}\,\left[c\,\left(\dfrac{dx}{ds}\right)^{-1}\,\dfrac{dy}{ds}\right] + f = 0	
 \]
@@ -476,7 +475,7 @@ Utilizzando la relazione \eqref{eq:relazione_derivata} appena calcolata
 \]
 ed essendo $s = s(x)$ 
 \[
-\dfrac{d}{dx}\,\left( c\,\dfrac{dy}{dx}\right)\,\dfrac{dx}{ds} + f = 0	
+\dfrac{d}{dx}\,\left( c\,\dfrac{dy}{dx}\right)\,\dfrac{dx}{ds} + f = 0,
 \]
 che è equivalente a scrivere
 \[
@@ -498,7 +497,7 @@ Sostituendo si ottiene la \emph{equazione cartesiana della funicolare}
 	c\,\left[1+ \left(\dfrac{dy}{dx}\right)^2\right]^{-1/2}\,\dfrac{d^2 y}{dx^2} + f = 0
 \end{equation}
 
-L'equazione \eqref{eq:cartesiana_funicolare} può essere ridotta a forma normale ponendo $\frac{dy}{dx} = p$ in modo tale che si ricavi il sistema
+L'equazione \eqref{eq:cartesiana_funicolare} può essere ridotta a forma normale ponendo $\frac{dy}{dx} = p$ in modo tale da ricavare il sistema
 \[
 \begin{cases}
 	\dfrac{dy}{dx} = p\\[1.5ex]	
@@ -523,14 +522,14 @@ mentre il valore della costante $c$ si ottiene una volta noti $p(x_0) = p_0$ e $
 c = T\,\dfrac{dx}{ds} = T\,\left(\dfrac{ds}{dx}\right)^{-1} = \dfrac{T_0}{\sqrt{1+p_0^2}}
 \]
 
-Infine, è sufficiente calcolare la tensione nel filo applicando la \eqref{eq:tensione_direzione_x} opportunamente manipolata
+Infine, è sufficiente calcolare la tensione nel filo applicando la \eqref{eq:tensione_direzione_x} opportunamente rielaborata
 \begin{equation}
 	\label{eq:calcolo_tensione}
 	T(x) = c\left[1+ \left(\dfrac{dy}{dx}\right)^2\right]^{1/2}
 \end{equation}
 
 \subsection{Problema a valori al contorno}
-Applicando il sistema di riferimento $Oxyz$ nel problema a valori al contorno trattato nel paragrafo \ref{section:condizioni_contorno} ci si imbatte in un problema: essendo noti gli estremi della fune $P(s_1)$ e $P(s_2)$ non è noto il valore costante della tensione $\overline{T}(s_0)$. 
+Applicando il sistema di riferimento $Oxyz$ nel problema a valori al contorno trattato nel paragrafo \ref{section:condizioni_contorno} ci si imbatte in una difficoltà: essendo noti gli estremi della fune $P(s_1)$ e $P(s_2)$ non è noto il valore costante della tensione $\overline{T}(s_0)$. 
 \[
 \overline{T}(s_0)\cdot \hat{e}_1	= T(s_0)\,\vtau (s_0)\cdot\hat{e}_1 = c 
 \]

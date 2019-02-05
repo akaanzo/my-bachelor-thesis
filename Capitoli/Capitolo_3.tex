@@ -44,7 +44,7 @@ che è il vettore risultante agente sul tratto di filo $ds$. Per ricavare la den
 \]
 
 Essendo $\overline{f}$ diretto lungo la sola direzione $\hat{e}_2$ il problema ricade nel caso studiato al capitolo~2 nel paragrafo~\ref{section:forze_continue_parallele} a pagina~\pageref{section:forze_continue_parallele}. 
-Risultano, allora, applicabili le due equazioni \eqref{eq:sistema_terna_standard} propriamente riscritte nel caso specifico per la costante $c$ strettamente positiva. 
+Risultano, allora, applicabili le due equazioni \eqref{eq:sistema_terna_standard} convenientemente riscritte nel caso specifico per la costante $c$ strettamente positiva. 
 
 Ricordando che 
 \[
@@ -97,7 +97,7 @@ In particolare, calcolando $T(x_1)$ e $T(x_2)$ si ricavano le tensioni agli estr
  
  \section{Catenaria omogenea}
  \input{Immagini/problema_catenaria_omogenea}
- Il problema della catenaria omogenea vuole studiare la configurazione di equilibrio di una fune di densità lineare $\lambda$ vincolata agli estremi $A$ e $B$ e soggetta esclusivamente al proprio peso (figura~\ref{fig:problema_catenaria_omogenea}). 
+ Il problema della catenaria omogenea consiste nel determinare la configurazione di equilibrio di una fune di densità lineare $\lambda$ vincolata agli estremi $A$ e $B$ e soggetta esclusivamente al proprio peso (figura~\ref{fig:problema_catenaria_omogenea}). 
  
  Il sistema di riferimento da scegliere è quello cartesiano destro $Oxyz$ dove la verticale coincide con l'asse $Oy$. Per semplicità si suppone che la fune giaccia nel piano $Oxy$.
  
@@ -173,7 +173,7 @@ Una volta calcolati i valori delle costanti $a, b$ e $c$ è possibile studiare l
 \[
 \begin{cases}
  y'(x) = \sinh\left(\dfrac{\lambda\,g}{c}\,x +a\right)\\
- y''(x) = \dfrac{\lambda\,g}{c}\,\cosh\left(\dfrac{\lambda\,g}{c}\,x + a\right) \geq \dfrac{\lambda\,g}{c}\geq 0\quad \forall x \in[x_1, x_2] 
+ y''(x) = \dfrac{\lambda\,g}{c}\,\cosh\left(\dfrac{\lambda\,g}{c}\,x + a\right) \geq \dfrac{\lambda\,g}{c}>0\quad \forall x \in[x_1, x_2] 
  \end{cases}
 \]
 
@@ -202,7 +202,7 @@ Una volta calcolati i valori delle costanti $a, b$ e $c$ è possibile studiare l
   
  \end{figure}
 
-Dalla derivata seconda si può constatare che la funicolare ha concavità rivolta verso l'alto, mentre, dalla derivata prima si possono studiare i punti critici
+Analizzando la derivata seconda si può constatare che la funicolare è una \emph{curva convessa}\footnote{Grafico di una funzione convessa}, mentre, dalla derivata prima si possono studiare i punti critici
 \[
  0 = \sinh\left(\dfrac{\lambda\,g}{c}\,x +a\right) \quad \Longleftrightarrow \quad x = -\dfrac{c\,a}{\lambda\,g}
 \]
@@ -281,13 +281,13 @@ La costanza del versore tangente, definito come
 \[
  \vtau = \dfrac{dP}{ds}(s) = cost.
 \]
-consegue dal fatto che la parametrizzazione della funicolare descrive una retta
+consegue dal fatto che la parametrizzazione della funicolare descrive un segmento di retta
 \[
  P(s) = P(s_0) + (s - s_0 )\,\vtau\qquad \forall s\in[s_1, s_2]
 \]
 con $s_0\in[s_1, s_2]$.
 
-Le tensioni agli estremi $A$ e $B$, allora, hanno ugual modulo e direzione ma verso opposto, come raffigurato in figura~\ref{fig:tensioni_forza_nulla}
+Le tensioni agli estremi $A$ e $B$, allora, hanno ugual modulo e direzione ma verso opposto, come rappresentato in figura~\ref{fig:tensioni_forza_nulla}
 
 \begin{figure}
  \centering
@@ -340,7 +340,7 @@ dove $c_1$ e $c_2$ sono costanti arbitrarie. Si può applicare quanto visto in p
 \end{cases}
 \]
 
-Postulando le costanti $c_1$ e $c_2$ strettamente positive e considerando l'ascissa curvilinea $s(x)$ una funzione della coordinata $x$, si può scrivere
+Postulando che le costanti $c_1$ e $c_2$ siano strettamente positive e considerando l'ascissa curvilinea $s(x)$ una funzione della coordinata $x$, si può scrivere
 \[
 \dfrac{ds}{dx} = \left.\left(\dfrac{dx}{ds}\right)^{-1}\right|_{s = s(x)} 
 \]
@@ -400,9 +400,9 @@ dove $c_3$ è una costante diversa da $c_1$ e $c_2$.
 
 La \eqref{eq:tratto_filo_costante} implica che, tra una sollecitazione puntuale e l'altra, il filo ha pendenza costante e risulta un segmento lineare, come è possibile vedere in figura~\ref{fig:fune_forze_concentrate}.
 
-Per il calcolo della tensione, è sufficiente isolare il termine $T$ come segue
+Per il calcolo della tensione è sufficiente isolare il termine $T$ come segue
 \[
-T(x) = c_1\,\dfrac{ds}{dx} = c_1\,\sqrt{1+\left(\dfrac{dy}{dx}\right)^2}
+T(x) = c_1\,\dfrac{ds}{dx} = c_1\,\sqrt{1+\left(\dfrac{dy}{dx}\right)^2},
 \]
 ma poiché $c_1 = cost.$ e $\frac{dy}{dx} = cost.$ la tensione $T_{i+1}$ riferita al tratto di filo compreso tra $P_i$ e $P_{i+1}$ risulta costante.
 \begin{equation}
