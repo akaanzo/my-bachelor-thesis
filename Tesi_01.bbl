@@ -1,0 +1,244 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.9 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\datalist[entry]{nyt/global//global/global}
+  \entry{sito:assembly}{online}{}
+    \field{label}{sito:assembly}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{title}{Assembly Speciality Products}
+    \verb{url}
+    \verb https://www.assemblyspecialty.com
+    \endverb
+    \field{urlday}{30}
+    \field{urlmonth}{11}
+    \field{urlyear}{2018}
+  \endentry
+
+  \entry{book:carotti}{book}{}
+    \name{author}{1}{}{%
+      {{hash=CA}{%
+         family={Carotti},
+         familyi={C\bibinitperiod},
+         given={Attilio},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer Milan}%
+    }
+    \strng{namehash}{CA1}
+    \strng{fullhash}{CA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{edition}{2}
+    \field{title}{Meccanica delle strutture e controllo attivo strutturale:
+  Modellistica di edifici, ponti, camini, strutture speciali}
+    \field{year}{2006}
+  \endentry
+
+  \entry{costello:fune}{book}{}
+    \name{author}{1}{}{%
+      {{hash=CGA}{%
+         family={Costello},
+         familyi={C\bibinitperiod},
+         given={George\bibnamedelima A.},
+         giveni={G\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer}%
+    }
+    \strng{namehash}{CGA1}
+    \strng{fullhash}{CGA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{edition}{2}
+    \field{title}{Theory of wire rope}
+    \list{location}{1}{%
+      {New York}%
+    }
+    \field{year}{1997}
+  \endentry
+
+  \entry{gimsing:cable}{book}{}
+    \name{author}{2}{}{%
+      {{hash=GNJ}{%
+         family={Gimsing},
+         familyi={G\bibinitperiod},
+         given={Niels\bibnamedelima J.},
+         giveni={N\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=GCT}{%
+         family={Georgakis},
+         familyi={G\bibinitperiod},
+         given={Christos\bibnamedelima T.},
+         giveni={C\bibinitperiod\bibinitdelim T\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Wiley}%
+    }
+    \strng{namehash}{GNJGCT1}
+    \strng{fullhash}{GNJGCT1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
+    \field{edition}{3}
+    \field{title}{Cable Supported Bridges: Concept and Design}
+    \field{year}{2012}
+  \endentry
+
+  \entry{mirandola:funi}{thesis}{}
+    \name{author}{1}{}{%
+      {{hash=MA}{%
+         family={Mirandola},
+         familyi={M\bibinitperiod},
+         given={Andrea},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MA1}
+    \strng{fullhash}{MA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{title}{La teoria dei fili ideali: introduzione e impiego dei cavi
+  nelle strutture civili}
+    \list{institution}{1}{%
+      {Università degli Studi di Trento}%
+    }
+    \field{type}{Tesi}
+    \warn{\item Invalid format of field 'date' \item Invalid format of field
+  'date'}
+  \endentry
+
+  \entry{landrini:storia}{thesis}{}
+    \name{author}{1}{}{%
+      {{hash=QM}{%
+         family={Quagliarolo},
+         familyi={Q\bibinitperiod},
+         given={Manuel},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{QM1}
+    \strng{fullhash}{QM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{Q}
+    \field{sortinithash}{Q}
+    \field{edition}{2}
+    \field{title}{Storia della scienza delle costruzioni: evoluzione storica
+  dei sistemi funi}
+    \list{location}{1}{%
+      {Milano}%
+    }
+    \list{institution}{1}{%
+      {Politecnico di Milano}%
+    }
+    \field{type}{Tesi}
+    \field{month}{12}
+    \field{year}{2010}
+  \endentry
+
+  \entry{sito:ravaniacciai}{online}{}
+    \field{label}{sito:ravani_acciai}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{R}
+    \field{sortinithash}{R}
+    \field{title}{Ravani Acciai}
+    \verb{url}
+    \verb http://www.ravaniacciai.it/glossario/glossary_it_192.aspx
+    \endverb
+    \field{urlday}{23}
+    \field{urlmonth}{11}
+    \field{urlyear}{2018}
+  \endentry
+
+  \entry{siboni:funi}{thesis}{}
+    \name{author}{1}{}{%
+      {{hash=SS}{%
+         family={Siboni},
+         familyi={S\bibinitperiod},
+         given={Stefano},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{SS1}
+    \strng{fullhash}{SS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{title}{Fili e loro equilibrio - Dispense per il corso di Meccanica
+  Razionale 2}
+    \list{institution}{1}{%
+      {Università degli Studi di Trento}%
+    }
+  \endentry
+
+  \entry{cyrus:ponte}{book}{}
+    \name{author}{1}{}{%
+      {{hash=SC}{%
+         family={Stearns},
+         familyi={S\bibinitperiod},
+         given={Cyrus},
+         giveni={C\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Snow Lion Publications}%
+    }
+    \strng{namehash}{SC1}
+    \strng{fullhash}{SC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{title}{King of the Empty Plain: The Tibetan Iron-Bridge Builder
+  Tangtong Gyalpo}
+    \field{year}{2007}
+  \endentry
+
+  \entry{sito:hanes}{manual}{}
+    \name{author}{1}{}{%
+      {{hash=SH}{%
+         family={Supply},
+         familyi={S\bibinitperiod},
+         given={Hanes},
+         giveni={H\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{SH1}
+    \strng{fullhash}{SH1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{title}{Wire Rope 101}
+  \endentry
+\enddatalist
+\endinput
