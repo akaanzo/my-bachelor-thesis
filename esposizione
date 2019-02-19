@@ -1,34 +1,39 @@
-******************************************************
-			ESPOSIZIONE
-******************************************************
+*************************************************************************************************************************************************************************************************************
+												ESPOSIZIONE
+*************************************************************************************************************************************************************************************************************
 
 
-******************************************************
-			INTRODUZIONE
-****************************************************** La fune è uno degli elementi 
-costruttivi più longevo e utilizzato fin dall'antichità. Basti pensare ai ponti inca 
-costruiti durante il quindicesimo secolo mediante corde intrecciate necessari per superare le 
-grandi vallate caratteristiche del sudamerica. Nello stesso periodo, in Tibet, venivano 
-costruiti i primi ponti sospesi tibetani con una struttura composta da lunghe catene che 
-sorreggevano, mediante altre catene, la passerella sottostante in legno. Con l'evoluzione dei 
-materiali si è arrivati all'utilizzo delle funi in acciaio. L'acciaio usato per le funi, 
-rispetto a quello per uso strutturale, ha una composizione chimica con un alto contenuto di 
-carbonio (0.80% rispeto a 0.15-0.20% dell'acciaio strutturale dolce/alta resistenza) che 
-aumenta notevolmente il carico di rottura a trazione. Per contro, la deformazione a rottura è 
-molto bassa, circa il 4%, rispetto al 24% dell'acciaio strutturale dolce. La fune è un ottimo 
-elemento costruttivo anche perché è componibile a piacere. Gli elementi che costituiscono la 
-fune sono 3: - il filo che è l'elemento base della fune; - il trefolo che è una composizione 
-di fili; - la fune che è una composizione di trfoli. In particolare, fune e trefoli possono 
-essere composti con metodi differenti come ad esempio l'avvolgimento elicoidale che si 
-distingue per la posa (lay) che descrive il senso di rotazione dei fili (right o left) e per 
-la direzione di posa di fune e trefolo che può essere crociata (regular) se trefolo e fune 
-sono avvolti con direzione opposta o parallela (lang). Data la presenza di interstizi nella 
-fune occorre fare un pretensionamento per compattare bene la fune ed evitare deformazioni 
-irreversibili. Altra tipologia è il locked-coil strand formato da più strati di fili avvolti 
-elicoidalmente e uno o più strati esterni formati da particolari fili a forma di Z che si 
-incastrano perfettamente e riducono gli spazi vuoti e fan si che la superficie esterna sia 
-continua e compatta. Infine c'è il parallel wire strand che come dice il nome è formato da 
-fili paralleli di sezione esagonale o esagonale allungata. Per evitare problemi 
-nell'avvolgimento dato dai fili paralleli è stata sviluppata una soluzione detta New PWS 
-Cable che avvolge i fili con un involucro in polietilene (HDPE) e fa si che la sezioni 
-mantenga la forma.
+
+*************************************************************************************************************************************************************************************************************
+												INTRODUZIONE
+*************************************************************************************************************************************************************************************************************
+La fune è uno degli elementi costruttivi più longevo e utilizzato fin dall'antichità. Basti, infatti, pensare ai ponti inca costruiti durante il quindicesimo secolo mediante corde intrecciate o ai primi ponti sospesi tibetani con una struttura composta da lunghe catene in lega di ferro.
+Con l'evoluzione tecnologica dei materiali si è passati da corde e catene all'utilizzo di funi in acciaio. L'acciaio usato per le funi, rispetto a quello per uso strutturale, è caratterizzato da una composizione chimica con un alto contenuto di carbonio (0.80% rispetto a 0.15-0.20% dell'acciaio strutturale dolce/alta resistenza) che gli conferisce un carico di rottura a trazione elevato rispetto all'acciaio strutturale(1570MPa rispetto ai 240MPa dell'acciaio dolce e ai 690MPa dell'acciaio ad alta resistenza). Per contro, la deformazione a rottura diminuisce notevolmente (circa il 4%, rispetto al 24% dell'acciaio strutturale dolce).
+La fune è un ottimo elemento costruttivo perché è versatile grazie al fatto che è completamento componibile.
+Gli elementi che costituiscono la fune sono 3: 
+- il filo che è l'elemento base della fune; 
+- il trefolo che è una composizione di fili; 
+- la fune che è una composizione di trefoli. 
+In particolare, fune e trefoli possono essere composti con metodi differenti come ad esempio l'avvolgimento elicoidale che si distingue per la posa (lay) che descrive il senso di rotazione dei fili (right o left) e per la direzione di posa dei fili rispetto a quella del trefolo che può essere crociata (regular) se trefolo e fune sono avvolti con posa opposta o parallela (lang). L'anima della fune può essere un filo o un trefolo.
+La presenza di interstizi tra i trefoli rende necessario un pretensionamento in modo da compattare bene la fune ed evitare deformazioni irreversibili. 
+Altra tipologia di fune è il locked-coil strand formato da più strati di fili. Gli strati interni sono composti da fili avvolti elicoidalmente con i metodi appena citati, mentre gli strati esterni sono formati da particolari fili a forma di Z che si incastrano perfettamente tra loro e riducono così gli spazi vuoti facendo si che la superficie esterna sia continua e compatta. 
+Infine c'è il parallel wire strand che come dice il nome è formato da fili paralleli che formano una sezione esagonale o esagonale allungata. 
+Per evitare problemi di deformazione della sezione è stata sviluppata una soluzione chiamata New PWS Cable che avvolge i fili con un involucro in polietilene (HDPE) e fa si che la sezioni mantenga la propria forma.
+*************************************************************************************************************************************************************************************************************
+												APPLICAZIONE
+*************************************************************************************************************************************************************************************************************
+Una delle applicazioni tecnologiche dove la fune è pesantemente utilizzata è sicuramente il ponte sospeso.
+I ponti sospesi sono composti da:
+- impalcato che è la parte transitabile del ponte e ha anche scopo di irrigidire la struttura;
+- sistema di cavi che è l'elemento caratteristico del ponte: comprende il cavo principale e i pendini e ha la funzione di trasmette gli sforzi dall'impalcato alle torri. 
+- piloni o torri sono gli elementi che scaricano gli sforzi a terra. Sono soggetti a momento flettente. 
+Per diminuire questo momento generato dalla fune, la si fa proseguire e la si ancora a terra in modo da equilibrare gli sforzi flettenti.
+
+Proprio per il ponte sospeso, esiste una equazione matematica che descrive la funicolare. Il problema in esame è atto a studiare la configurazione di equilibrio di una fune di lunghezza L vincolata agi estremi cui è collegata, mediante dei tiranti verticali, una sbarra di densità lineare lambda soggetta alla gravità. 
+Ipotizzando un numero di tiranti elevato, si può pensare alla fune come soggetta a un carico distribuito di modulo e direzione costante lungo tutta la fune. E` quindi applicabile l'equazione indefinita di equilibrio riscritta per una terna cartesiana ortogonale Oxy.
+Imponendo le condizioni iniziali, grazie al teorema di esistenza e unicità della soluzione è possibile ricavare la soluzione (unica) del problema che descrive la parametrizzazione della funicolare che risulta una parabola.
+Infatti, dai primi studi sulla teoria dei fili a cavallo tra il 15esimo e il 16esimo secolo proposti da Leonardo da Vinci e, nel secolo successivo da Galileo Galilei si fa riferimento alla funicolare come una curva parabolica. 
+Nei secoli successivi Huygens si rese conto che la parabola non è la curva che descrive esattamente la funicolare. Infatti, questa curva è detta catenaria, descritta da un coseno iperbolico.
+Per applicazioni in ambito civile, come i ponti sospesi però, si può approssimare la catenaria, sviluppando il serie di Taylor fino al secondo ordine il coseno iperbolico nell'intorno del suo punto critico, con una parabola.
+Galileo non aveva quindi torno, tenuto conto delle opportune approssimazioni.
+
